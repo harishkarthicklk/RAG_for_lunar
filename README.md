@@ -80,6 +80,7 @@ Navigate to the project directory:
 ```bash
 cd RAG_for_lunar
 ```
+# demo video : https://drive.google.com/file/d/1s90-TmWV5gNnh6tiMfBj661mGdeqUc9q/view?usp=sharing
 
 ## Create a Virtual Environment
 
