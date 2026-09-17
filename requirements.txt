@@ -1,1 +1,6 @@
-
+streamlit
+ollama
+chromadb
+langchain
+langgraph
+langchain-ollama
