@@ -1,0 +1,92 @@
+[
+    {
+        "chunk_id": "leader_election_chunk_0000",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 0,
+        "total_chunks": 9,
+        "text": "Welcome to this system design series tutorial. Today, we're diving into the world of leader election algorithms for distributed systems. Distributed systems are a core part of modern computing, and understanding how to manage them as essential. Let's get started with leader election. So what exactly is leader election? In a distributed system, leader election is the process by which multiple nodes coordinate to select a single node to act as the leader"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0001",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 1,
+        "total_chunks": 9,
+        "text": ". This leader then takes on the responsibility of coordinating tasks, making decisions, or managing resources across the system. Think of it as a democratic process, but for computers. Now, the question is, why do we even need leader election and distributed systems? There are two key reasons. Firstly, to avoid split-brain scenarios. This is when multiple nodes incorrectly believe they are the leader, leading to conflicting decisions and data corruption. Secondly, to achieve coordination"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0002",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 2,
+        "total_chunks": 9,
+        "text": ". Secondly, to achieve coordination. Having a single leader simplifies the management of distributed operations, ensuring consistency and order. Let's explore the bully algorithm. In this algorithm, the node with the highest identification becomes the leader. Think of it in terms of strength. Higher identification nodes bully the lower identification nodes, asserting their dominance to take over as the leader. Let's examine how the bully algorithm works with some pseudo code"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0003",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 3,
+        "total_chunks": 9,
+        "text": ". Let's examine how the bully algorithm works with some pseudo code. First, a node detects a leader failure and initiates an election by sending election messages to nodes with higher identifications. If no responses receive, the initiating node becomes the leader and broadcast its victory. Otherwise, it waits for the new coordinator to take charge. Now, let's look at the ring algorithm. In this setup, nodes are arranged in a logical ring topology"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0004",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 4,
+        "total_chunks": 9,
+        "text": ". Now, let's look at the ring algorithm. In this setup, nodes are arranged in a logical ring topology. The key point here is that an election message travels around this ring, with each node contributing until a leader is selected. Let's walk through the pseudo code for the ring algorithm. An election is initiated by any node, which creates an election message containing its own identification and sends it to the next node in the ring"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0005",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 5,
+        "total_chunks": 9,
+        "text": ". An election is initiated by any node, which creates an election message containing its own identification and sends it to the next node in the ring. Each node depends its identification to the message and forwards it. When the message returns to the initiator, the node with the highest identification is chosen as the leader and its identification is broadcasted across the network. Let's explore the raft leader election algorithm. Two key features distinguish it"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0006",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 6,
+        "total_chunks": 9,
+        "text": ". Let's explore the raft leader election algorithm. Two key features distinguish it. Firstly, it employs randomized timeouts to prevent split votes during elections. Each node waits for a random duration before starting an election. Secondly, it requires a majority consensus. A candidate must secure votes from a majority of the cluster to become the leader. Let's describe the raft leader election process with pseudo code"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0007",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 7,
+        "total_chunks": 9,
+        "text": ". A candidate must secure votes from a majority of the cluster to become the leader. Let's describe the raft leader election process with pseudo code. If a follower's timeout triggers, it increments its current term transitions to the candidate state and votes for itself. Then it sends vote requests to all other nodes in the cluster. If it receives votes from the majority, it becomes the leader and starts sending heartbeats to maintain its authority"
+    },
+    {
+        "chunk_id": "leader_election_chunk_0008",
+        "doc_id": "leader_election",
+        "title": "Leader Election",
+        "topic": "distributed_system",
+        "source": "Leader Election.mp4",
+        "chunk_index": 8,
+        "total_chunks": 9,
+        "text": ". If it receives votes from the majority, it becomes the leader and starts sending heartbeats to maintain its authority. Let's compare the three algorithms, bully, ring, and raft across different parameters. In terms of message complexity, bully has order of n squared, ring, and raft have order of n. For fault tolerance, bully has moderate, ring has low and raft has high. For network topology, bully and raft support any topology but ring supports ring topology only."
+    }
+]

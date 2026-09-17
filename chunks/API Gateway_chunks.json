@@ -1,0 +1,112 @@
+[
+    {
+        "chunk_id": "api_gateway_chunk_0000",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 0,
+        "total_chunks": 11,
+        "text": "An API is a programming interface that allows access to a service, such as data or functionalities, provided by a third-party system. In this case, it is said that the third-party system exposes an API. If you want to learn more, I recommend checking out my dedicated video on APIs. The API Gateway, as its name suggests, is a device that acts as a gateway to allow external clients to use internal APIs and thus the services behind these APIs"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0001",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 1,
+        "total_chunks": 11,
+        "text": ". It saves clients from the burden of having to know the locations of each instance of the used service. They only need to contact the API Gateway. Here are some examples of API Gateway's. Google's APIG, API Management, AWS API Gateway, Azure API Gateway, and Kong API Gateway. The API Gateway performs various cross-cutting tasks. It's not an exhaustive list, but I'll present the main ones. Firstly, the API Gateway acts as a reverse proxy, routing client requests to the requested services"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0002",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 2,
+        "total_chunks": 11,
+        "text": ". Firstly, the API Gateway acts as a reverse proxy, routing client requests to the requested services. APIGateways can distribute incoming requests across multiple backend servers or microservices. The API Gateway also plays a role in orchestrating services. If processing a request requires calls to multiple APIs, the client sends a single request to the API Gateway"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0003",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 3,
+        "total_chunks": 11,
+        "text": ". If processing a request requires calls to multiple APIs, the client sends a single request to the API Gateway. The API Gateway then distributes the requests among the different services, aggregates the results, and sends them back to the client. Not all applications speak the same language. An API Gateway translates requests and responses between different protocols, allowing diverse applications to communicate seamlessly"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0004",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 4,
+        "total_chunks": 11,
+        "text": ". An API Gateway translates requests and responses between different protocols, allowing diverse applications to communicate seamlessly. It plays a transformation role when sending requests from the API Gateway to internal APIs by adapting client requests to the formats used by internal APIs, whether in terms of data or expected protocols"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0005",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 5,
+        "total_chunks": 11,
+        "text": ". It allows request authentication, secures access to internal APIs by enabling TLS termination, performs web application firewall, allowing or blocking requests based on security rules. It also manages the monitoring of various backend APIs, such as measuring response time, performance, error rates, or log management. The API Gateway collects valuable data on usage, performance, and errors, helping you optimize and enhance the user experience"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0006",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 6,
+        "total_chunks": 11,
+        "text": ". The API Gateway collects valuable data on usage, performance, and errors, helping you optimize and enhance the user experience. The API Gateway also offers features to manage API monetization, which is crucial as companies can generate revenue from the consumption of services via APIs. APIs also have financial implications, as clients pay for their usage. Developing services and providing them through APIs generates business opportunities"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0007",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 7,
+        "total_chunks": 11,
+        "text": ". Developing services and providing them through APIs generates business opportunities. On the backend services side, this saves developers a lot of time, allowing them to focus on developing business logic for services instead of, for example, spending time redeveloping authentication for each service. For the organization, the API Gateway makes it easy to publish, manage, and secure APIs"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0008",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 8,
+        "total_chunks": 11,
+        "text": ". For the organization, the API Gateway makes it easy to publish, manage, and secure APIs. On the client side, the API Gateway provides a simple and optimized experience for exposed services, hiding the complexity of the backend. Furthermore, the API Gateway is essential in a microservices architecture. As a reminder, a microservices architecture is a software architecture approach, where an application is decomposed into several small services"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0009",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 9,
+        "total_chunks": 11,
+        "text": ". As a reminder, a microservices architecture is a software architecture approach, where an application is decomposed into several small services. For example, in an online shopping site, there might be microservices for the shopping cart, home page, history, inventory, etc. and together, they form the application. Microservices can be called by clients through APIs. There is often confusion between API Gateway and Service Mesh"
+    },
+    {
+        "chunk_id": "api_gateway_chunk_0010",
+        "doc_id": "api_gateway",
+        "title": "API Gateway",
+        "topic": "microservices",
+        "source": "API Gateway.mp4",
+        "chunk_index": 10,
+        "total_chunks": 11,
+        "text": ". Microservices can be called by clients through APIs. There is often confusion between API Gateway and Service Mesh. The main difference is that the API Gateway facilitates communication between external clients and services via their APIs, while the Service Mesh is a network service that facilitates communication between microservices internally. Thank you for staying till the end. If it was helpful, consider subscribing for more. See you in the next video. Bye!"
+    }
+]

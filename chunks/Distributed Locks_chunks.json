@@ -1,0 +1,132 @@
+[
+    {
+        "chunk_id": "distributed_locks_chunk_0000",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 0,
+        "total_chunks": 13,
+        "text": "Let's explore distributed locking. Here we will be implementing locks across distributed systems. A distributed lock is a mechanism that ensures mutual exclusion of shared resources across multiple nodes in a distributed system. Mutual exclusion is a property of concurrency control, which is instituted to prevent race conditions. It states that no two processes may simultaneously enter their critical section. It is the basic requirement for successfully implementing critical sections"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0001",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 1,
+        "total_chunks": 13,
+        "text": ". It is the basic requirement for successfully implementing critical sections. This is the basic definition of a distributed lock. Let's see the need for distributed locks. The problems that might occur because of absence of distributed locks are race conditions, which means multiple processes accessing shared resources simultaneously and data inconsistency, where concurrent updates leading to corrupted or invalid state. To avoid these problems, we need distributed locking"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0002",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 2,
+        "total_chunks": 13,
+        "text": ". To avoid these problems, we need distributed locking. Race condition is a situation that may occur inside a critical section. This happens when the result of multiple threads depend on the order in which they execute. Data inconsistency occurs when data is changed in multiple places, but some locations are not updated properly, which results in inconsistent data. Data inconsistency is the case when same data item has different values in different places"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0003",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 3,
+        "total_chunks": 13,
+        "text": ". Data inconsistency is the case when same data item has different values in different places. Here are some common approaches to implement distributed locks. First, database locks, which means using database transactions and row-level locking. Second, redis locks, which means leveraging redis atomic operations and expiration. And third, zookeeper, which means distributed coordination service with strong consistency"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0004",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 4,
+        "total_chunks": 13,
+        "text": ". And third, zookeeper, which means distributed coordination service with strong consistency. Database locking uses the features provided by the database itself to ensure that only one transaction can modify a particular row or table at a time. Redis locks are based on redis atomic operations, such as SETNX, to automatically set a key if it doesn't already exist, effectively acquiring a lock"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0005",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 5,
+        "total_chunks": 13,
+        "text": ". Zookeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and group services. Zookeeper uses its hierarchical file system like structure to represent locks. Let us see a basic redis lock implementation. The code is written in Python. Here we have a function named acquire underscore lock, which takes redis client, key and timeout as input parameters"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0006",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 6,
+        "total_chunks": 13,
+        "text": ". The code is written in Python. Here we have a function named acquire underscore lock, which takes redis client, key and timeout as input parameters. The functionality is implemented using redisclient.set with parameters key, locked, nx equals true, and x equals timeout. Here nx equals true means only set if the key does not exist. An x equals timeout means setting expiration time. Finally, we return the result as not none. This is a basic implementation of redis lock"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0007",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 7,
+        "total_chunks": 13,
+        "text": ". An x equals timeout means setting expiration time. Finally, we return the result as not none. This is a basic implementation of redis lock. Here's an overview of the red lock algorithm. It uses a multi-master redis setup. The first step is to acquire locks on the majority of redis instances. Second, use unique identifiers and timestamps. Third, release all locks if the majority is not achieved. Redlock is a more complex algorithm compared to the single instance redis lock"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0008",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 8,
+        "total_chunks": 13,
+        "text": ". Third, release all locks if the majority is not achieved. Redlock is a more complex algorithm compared to the single instance redis lock. It aims to improve the reliability and fault tolerance of distributed locks by using multiple independent redis masters. The key idea behind redlock is to acquire locks on a majority of the redis instances in the cluster. The key challenges in using distributed locks are deadlocks, which means circular dependencies between multiple locks"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0009",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 9,
+        "total_chunks": 13,
+        "text": ". The key challenges in using distributed locks are deadlocks, which means circular dependencies between multiple locks. And lock expiration, which means handling timeouts and automatic lock release. Deadlock is a situation in which two or more computing tasks are each waiting for the other to finish, and so neither ever does"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0010",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 10,
+        "total_chunks": 13,
+        "text": ". Deadlock is a situation in which two or more computing tasks are each waiting for the other to finish, and so neither ever does. Lock expiration is a crucial part of distributed lock management to ensure that locks are automatically released after a certain period of time, even if the client holding the lock fails or does not release it properly. Here are some best practices to follow. Always set timeouts, which means always use expiration to prevent stuck locks"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0011",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 11,
+        "total_chunks": 13,
+        "text": ". Here are some best practices to follow. Always set timeouts, which means always use expiration to prevent stuck locks. Use unique keys, which means using universally unique identifiers, or UUIDs for lock identification and ownership. An implement retry logic, which means implementing exponential back-off for lock acquisition. Setting timeouts prevents the lock from being held indefinitely, even if the client holding the lock crashes or becomes unresponsive"
+    },
+    {
+        "chunk_id": "distributed_locks_chunk_0012",
+        "doc_id": "distributed_locks",
+        "title": "Distributed Locks",
+        "topic": "distributed_system",
+        "source": "Distributed Locks.mp4",
+        "chunk_index": 12,
+        "total_chunks": 13,
+        "text": ". Setting timeouts prevents the lock from being held indefinitely, even if the client holding the lock crashes or becomes unresponsive. Unique keys are used for lock identification and ownership. Retry logic, particularly with exponential back-off, is essential to handle cases where the lock is already held by another client."
+    }
+]

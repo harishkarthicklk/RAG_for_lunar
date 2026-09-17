@@ -1,0 +1,232 @@
+[
+    {
+        "chunk_id": "service_discovery_chunk_0000",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 0,
+        "total_chunks": 23,
+        "text": "When you build an application with microservices, one of the most basic things you'll need to do is to have them talk to each other. This is the basis of service discovery. It's a fundamental pattern in microservice architecture. In this video, let's examine all the key concepts of service discovery that you really need to know. Once upon a time, that lived a little class in a Java code base. Had a few friends, other classes in the same code base"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0001",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 1,
+        "total_chunks": 23,
+        "text": ". Once upon a time, that lived a little class in a Java code base. Had a few friends, other classes in the same code base. In fact, since this was a monolithic code base, the little class had a lot of friends. It had instances of other classes and called their methods to execute functionality. And as friend classes called its methods to execute some other functionality, they were all living happily. Life was good. And one day, an evil enterprise architect entered the picture and ruined it all"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0002",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 2,
+        "total_chunks": 23,
+        "text": ". Life was good. And one day, an evil enterprise architect entered the picture and ruined it all. He had heard about microservices being a thing and that's what all this fellow architects were doing. So he decides to split this monolithic code base into smaller microservices. He mercilessly separates the classes in the code base and separate microservice projects. And they were based on the problem domain and their responsibilities and all that stuff"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0003",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 3,
+        "total_chunks": 23,
+        "text": ". And they were based on the problem domain and their responsibilities and all that stuff. And so this little class ends up in a different microservice project from its friend. And it's hard broken. What is it to do? How can it contact its friend class and call its methods? It's asked around and then everyone tells him, no little class, your friend is not in the same code base. You cannot call his methods directly. You have to use it for SAPIs"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0004",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 4,
+        "total_chunks": 23,
+        "text": ". You cannot call his methods directly. You have to use it for SAPIs. And the little class wonderers, how will I know which API you are all to call? How will I find out where my friend is? Okay, as old dramatic as the story is, it illustrates a fundamental concept and a need for service discovery. Unlike a monolithic application, a microservice architecture means that there are multiple smaller applications that need to communicate with each other. We are STPI's"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0005",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 5,
+        "total_chunks": 23,
+        "text": ". We are STPI's. So how does one microservice know where the other microservices deployed? One thing you could do is hard code the URL in the microservice, but that's not a good idea for multiple reasons. What if the URL changes? What if there are multiple instances that need load balancing? We need a better approach. And the solution is service discovery. The concept behind service discovery is very simple"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0006",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 6,
+        "total_chunks": 23,
+        "text": ". And the solution is service discovery. The concept behind service discovery is very simple. Let's say you're creating a couple of microservices that need to be accessed by other microservices. What you do is first create a new microservice called a discovery server. Its job is to keep track of where all your microservices are. Every service that needs to be accessed by other microservices registers itself with this discovery server. They basically say, hey Mr. Discovery server, I'm right here"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0007",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 7,
+        "total_chunks": 23,
+        "text": ". They basically say, hey Mr. Discovery server, I'm right here. This is my name just so you know in case anyone is looking for me. And the discovery server accesses a service registry. It makes a note. Anyone who needs to locate a service would just ask it for help. This process of asking a discovery server for help to get to a service that you need is essentially called service discovery"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0008",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 8,
+        "total_chunks": 23,
+        "text": ". This process of asking a discovery server for help to get to a service that you need is essentially called service discovery. In that sense, it's more accurately called service location discovery because you're discovering the location of a service. Okay, so now that you understand what the discovery server is, how does this service discovery work? There are two models, two patterns here. One is client site service discovery and the other is service site service discovery"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0009",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 9,
+        "total_chunks": 23,
+        "text": ". One is client site service discovery and the other is service site service discovery. Let's understand them both starting with client site service discovery. Let me tell you we've all done client site service discovery. Let's say you're sitting at home and you decide you want to order some pizza. You need to call the pizza guys to place your order"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0010",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 10,
+        "total_chunks": 23,
+        "text": ". Let's say you're sitting at home and you decide you want to order some pizza. You need to call the pizza guys to place your order. So what do you do first? You hop on to a search engine say Google and you look up the phone number and then use that phone number to call the pizza place. This very act of looking up information of something by contacting something which has that contact information. Well, what you're doing here is service discovery"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0011",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 11,
+        "total_chunks": 23,
+        "text": ". Well, what you're doing here is service discovery. Here Google is acting like a service registry and you are the client who's using the service registry to locate the service you need which happens to be the pizza place. And once you look at you call the service another example of service registry is a phone book or yellow pages. You hardly see these things these days and I'm guessing half of you folks don't even know what this is. Oh man, I feel old"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0012",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 12,
+        "total_chunks": 23,
+        "text": ". You hardly see these things these days and I'm guessing half of you folks don't even know what this is. Oh man, I feel old. Okay, back to the pizza place phone analogy. Who's doing all the work here to discover the service? It's you the client. You tell the registry what you want. You look up the number and then you call the place. This model is called client site service discovery"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0013",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 13,
+        "total_chunks": 23,
+        "text": ". You tell the registry what you want. You look up the number and then you call the place. This model is called client site service discovery. In the case of microservices, the client microservice does the look up with the discovery server to identify the location of the service it needs. Then it makes a second request to the actual service itself. This is client side service discovery. The disadvantage should be obvious"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0014",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 14,
+        "total_chunks": 23,
+        "text": ". Then it makes a second request to the actual service itself. This is client side service discovery. The disadvantage should be obvious. The client has to make two calls one to the service registry and one to the actual service. Now let's look at a second model of service discovery. Let's take a different scenario. This time you're not calling to order pizza. Let's say you're trying to reach someone who works in a large office. You don't know their extension. So you call the reception desk"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0015",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 15,
+        "total_chunks": 23,
+        "text": ". Let's say you're trying to reach someone who works in a large office. You don't know their extension. So you call the reception desk. The receptionist picks up and asks you the name of the person you're trying to reach. You tell the name and the receptionist looks up the extension number and transfers your call directly to that person"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0016",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 16,
+        "total_chunks": 23,
+        "text": ". You tell the name and the receptionist looks up the extension number and transfers your call directly to that person. The receptionist still has all the information she knows or can look up who works in the company and what their extension numbers are, but she doesn't give you the information. She makes sure that your request reaches the right person directly. In this model, the client isn't doing the work. There's something on the server that's doing the work for you"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0017",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 17,
+        "total_chunks": 23,
+        "text": ". In this model, the client isn't doing the work. There's something on the server that's doing the work for you. This is service-side service discovery. Just like you can implement client side service discovery, you can also implement service-side service discovery in microservices. You essentially have something running on the server that accepts requests. The client sends the request and information about the service it actually wants to reach"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0018",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 18,
+        "total_chunks": 23,
+        "text": ". The client sends the request and information about the service it actually wants to reach. And this entity on the server channels are transports it to the right destination. The advantage of this model is that there are multiple calls that need to be done by the client. You instead have the work done by the service-side component. The disadvantage is that you need to have the service-side component running at all times that knows how to do this stuff"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0019",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 19,
+        "total_chunks": 23,
+        "text": ". The disadvantage is that you need to have the service-side component running at all times that knows how to do this stuff. You might say, well, we need the service discovery server running on the server all the time anyway. So what's the big deal in adding one more thing running on the server? Or maybe you have this thing be smart enough to do both. And yes, that's totally possible. But it's still responsibility that you need to apply and maintain on the server"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0020",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 20,
+        "total_chunks": 23,
+        "text": ". And yes, that's totally possible. But it's still responsibility that you need to apply and maintain on the server. So depending on what model you follow to enable your microservices to talk to each other, you need to use the right technology for it. Commonly use technology for service discovery is something called Ureca. Ureca does client-side service discovery"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0021",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 21,
+        "total_chunks": 23,
+        "text": ". Commonly use technology for service discovery is something called Ureca. Ureca does client-side service discovery. If you're going the service-side discovery route, there are providers like Nginx or AWS that provide solutions that you can choose from. So there you have it. Two models of service discovery, both doing the same thing pretty much, connecting microservices together and having them look at who and where to call"
+    },
+    {
+        "chunk_id": "service_discovery_chunk_0022",
+        "doc_id": "service_discovery",
+        "title": "Service Discovery",
+        "topic": "microservices",
+        "source": "Service Discovery.mp4",
+        "chunk_index": 22,
+        "total_chunks": 23,
+        "text": ". And to wrap this video up with a happy ending, the little class that was so cruelly separated from its friend manages to ask the discovery server for his friend's location, reaches out, and they live happily a bit after. Or something like that. Thanks for watching."
+    }
+]

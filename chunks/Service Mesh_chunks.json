@@ -1,0 +1,352 @@
+[
+    {
+        "chunk_id": "service_mesh_chunk_0000",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 0,
+        "total_chunks": 35,
+        "text": "In this video, you will learn about ServiceMesh and one of its implementations, which is Istio. In order to understand the concepts, we will first look at the challenges of a microservices application, and then we will see how different features of a ServiceMesh solve these challenges. We will look at how Istio implement ServiceMesh and learn about Istio architecture, as well as how to configure Istio for our microservices application"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0001",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 1,
+        "total_chunks": 35,
+        "text": ". Istio is a ServiceMesh, so in order to understand Istio, we need to understand what ServiceMesh is. In ServiceMesh is a popular solution for managing communication between individual microservices in a microservice application. So why do we need a dedicated tool for microservices communication, and what are the challenges here? When we move from Monolith to microservices application, we introduce a couple of new challenges that we didn't have with a Monolith application"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0002",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 2,
+        "total_chunks": 35,
+        "text": ". Let's say we have an online shop application, which is made up of several microservices. We have the web server that gets the UI requests, payment microservice that handles the payment logic. Let's say we have a shopping cart, product inventory, database, and probably some more services. We are deploying our microservice application inside a Kubernetes cluster"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0003",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 3,
+        "total_chunks": 35,
+        "text": ". We are deploying our microservice application inside a Kubernetes cluster. What does our microservice application set up need to run successfully, or what are some of the required configurations for such an application? First of all, each microservice has its own business logic. Payment service handles the payment logic, web server handles UI requests, database persists data, and so on. Now services need to talk to each other"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0004",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 4,
+        "total_chunks": 35,
+        "text": ". Now services need to talk to each other. When user puts stuff in the shopping cart, request is received by the web server, which hands it over to the shopping cart microservice, which we'll talk to the database to persist the data. So how do services know how to talk to each other? What is the end point of each service? All the service endpoints that a web server talks to must be configured for web server"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0005",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 5,
+        "total_chunks": 35,
+        "text": ". So when we add a new microservice, we need to add the end point of that new service to all the microservices that need to talk to it. So we have that information as part of the application deployment code. Now what about security in our microservice application setup? Generally, a common environment in many projects will look like this. You have viral rules setup for your community cluster. Maybe you have a proxy as entry point that gets the request first so cluster can't be accessed directly"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0006",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 6,
+        "total_chunks": 35,
+        "text": ". Maybe you have a proxy as entry point that gets the request first so cluster can't be accessed directly. So you have security around the cluster. However, once requests gets inside the cluster, the communication is insecure. Microservices talk to each other over HTTP or some other insecure protocol. Also services talk to each other freely. Every service inside the cluster can talk to any other service. So there are no restrictions on that"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0007",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 7,
+        "total_chunks": 35,
+        "text": ". Also services talk to each other freely. Every service inside the cluster can talk to any other service. So there are no restrictions on that. So this means that from security perspective, if an attacker gets inside the cluster, it can do anything because we don't have any additional security inside. And maybe for small applications that don't really have any sensitive user data, it may be okay"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0008",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 8,
+        "total_chunks": 35,
+        "text": ". And maybe for small applications that don't really have any sensitive user data, it may be okay. But for more important applications like online banks or apps with lots of personal user data, a higher level of security is very important. So you want everything to be as secure as possible. So again, additional configuration inside each application is needed to secure communication between services within the cluster"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0009",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 9,
+        "total_chunks": 35,
+        "text": ". So again, additional configuration inside each application is needed to secure communication between services within the cluster. You also need retry logic in each microservice to make the whole application more robust. If one microservice is unreachable or you lose connection for a bit, you want to retry the connection. So developers will add this retry logic also to the services. What about metrics for your services? You want to be able to monitor how the services are performing"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0010",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 10,
+        "total_chunks": 35,
+        "text": ". What about metrics for your services? You want to be able to monitor how the services are performing. What HTTP errors are you getting? How many requests are your microservices receiving or sending or how long does a request take to identify the bottlenecks in your application? So development team may add a monitoring logic for Prometheus, for example, using Prometheus client library and collect tracing data using a tracing library like Zipkin, for example"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0011",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 11,
+        "total_chunks": 35,
+        "text": ". So as you see, teams of developers of each microservice need to add all this logic to each service and maybe configure some additional stuff in the cluster to handle all these very important challenges in the microservices application. And this means that developers of microservices are not working on the actual service logic, but are busy adding network logic for metrics and security and communication, etc"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0012",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 12,
+        "total_chunks": 35,
+        "text": ". for each microservice, which also adds complexity to the services instead of keeping them simple and lightweight. Now wouldn't it make more sense to extract all the non-business logic out of the microservices and into its own small site car application that handles all of these logic and X as a proxy? And this small application is a third party application that cluster operators can easily configure through a simple API without worrying about how the logic is implemented"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0013",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 13,
+        "total_chunks": 35,
+        "text": ". And developers can now focus on developing the actual business logic. And know that you don't have to add this site car configuration to your microservice deployment, YAMO file, because service mesh has a control plane that will automatically inject this proxy in every microservice pod. So now the microservices can talk to each other through those proxies. And the network layer for service to service communication consisting of control plane and the proxies is a service mesh"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0014",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 14,
+        "total_chunks": 35,
+        "text": ". And the network layer for service to service communication consisting of control plane and the proxies is a service mesh. In addition to the above features, one of the most important features of a service mesh is traffic split configuration. So what is a traffic split? When changes are made to a payment microservice, for example, a new version is built, tested and deployed to a production environment, now of course you can rely on tests to validate the new version"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0015",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 15,
+        "total_chunks": 35,
+        "text": ". But what if the new version has a bug that you couldn't catch with the tests? Happens very often depending on the test coverage. So in this case, you don't want to end up with a new version of payment service in production if it doesn't work. It may cost your company a lot of money. So you want to send maybe only 1% or 10% traffic to the new version for a period of time to make sure it really works"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0016",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 16,
+        "total_chunks": 35,
+        "text": ". So you want to send maybe only 1% or 10% traffic to the new version for a period of time to make sure it really works. So with service mesh, you can easily configure a web server microservice to direct 90% of traffic to the payment service version 2.0 and 10% of traffic to the version 3.0. Which is also known as canary deployment. And as I mentioned at the beginning, service mesh is just a pattern or a paradigm and Istio is one of its implementations"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0017",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 17,
+        "total_chunks": 35,
+        "text": ". And as I mentioned at the beginning, service mesh is just a pattern or a paradigm and Istio is one of its implementations. And in Istio architecture, the proxies are invoitte proxies, which is an independent open source project that Istio as well as many other service mesh implementations also use. And the control plane component in Istio is Istio D, which manages and injects the envoy proxies in each of the microservice pods"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0018",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 18,
+        "total_chunks": 35,
+        "text": ". And the control plane component in Istio is Istio D, which manages and injects the envoy proxies in each of the microservice pods. Now note here that in earlier versions of Istio up to version 1.5, Istio control plane was a bundle of multiple components. You had the Citadel, Mixer, Gally and some other components. So you had multiple pods when you deployed Istio"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0019",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 19,
+        "total_chunks": 35,
+        "text": ". You had the Citadel, Mixer, Gally and some other components. So you had multiple pods when you deployed Istio. However, in version 1.5, all of these separate components were combined back into one single Istio D component to make it easier for the operators to configure and operate Istio. So if you have read articles or watched videos where all these components are explained separately, note that this is only relevant for the earlier versions"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0020",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 20,
+        "total_chunks": 35,
+        "text": ". Now you only worry about one single Istio D component. So Istio architecture is comprised of the control plane which has Istio D component and control plane manages a data plane which is group of all the envoy proxies. So now the question is how do we configure all these above features for our microservices in Istio. As I mentioned, you don't have to adjust deployment and service demo files for your microservices. So all the configuration for Istio components will be done in Istio itself"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0021",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 21,
+        "total_chunks": 35,
+        "text": ". So all the configuration for Istio components will be done in Istio itself. Again, having a clear separation between the application logic and configuration and the service mesh logic and configuration. And the great thing is that Istio can be configured with Kubernetes Yemml files because it uses CRDs by extending Kubernetes API. CRD is basically a custom resource or custom component in Kubernetes that can be used to allow configuring these third-party technologies like Istio, Prometheus, etc"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0022",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 22,
+        "total_chunks": 35,
+        "text": ". using the same Kubernetes Yeml files and apply them using CUPCTL without having to learn a technology-specific configuration language and adjusting the configuration directly inside Istio for example. So using a few Istio CRDs, we can configure different traffic routing rules between our microservices like which services can talk to each other, traffic split configuration, the retry rules, timeouts, and many other network configurations"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0023",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 23,
+        "total_chunks": 35,
+        "text": ". And there are two main CRDs for configuring service to service communication, virtual service which configures how to route the traffic to a specific service, and once that traffic is actually routed to that service, on top of that, using destination rule component, we can configure some policies on that traffic like what kind of load balancing to use to talk to the pods behind the destination service"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0024",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 24,
+        "total_chunks": 35,
+        "text": ". So overall, as you see, we create this CRDs, custom resource definitions in Kubernetes that Istio D component which is Istio control plane will read and convert into invoice-specific configuration and send that configuration out to all the invoice-proxies. So we don't configure proxies, we configure control plane, and control plane itself will then push the configuration out to all individual invoice-proxies"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0025",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 25,
+        "total_chunks": 35,
+        "text": ". And the proxies themselves can now communicate with each other by applying this configuration that we define without having to go back to the Istio control plane. So they can independently talk to each other because they have all the logic and configuration they need without talking to the control plane. In addition to configuring the proxies, Istio D also has a central registry for all the microservices"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0026",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 26,
+        "total_chunks": 35,
+        "text": ". In addition to configuring the proxies, Istio D also has a central registry for all the microservices. So instead of statically configuring the endpoints for each microservice, when a new microservice gets deployed, it will automatically get registered in the service registry without the need of any additional configuration from our side because Istio automatically detects the services and endpoints in the cluster"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0027",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 27,
+        "total_chunks": 35,
+        "text": ". And using this service registry, the envoy proxies can now query the endpoints to send the traffic to the relevant services. In addition to this dynamic service discovery feature, Istio D also acts as a CA, as a certificate authority, and generates certificates for all the microservices in the cluster to allow secured TLS communication between proxies of those microservices"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0028",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 28,
+        "total_chunks": 35,
+        "text": ". And finally, Istio D gets metrics and tracing data from the envoy proxies that it gathers, that can be later consumed by monitoring server like permit views or tracing servers, etc. to have out of the box metrics and tracing data for your whole microservice application. Istio has another component called Istio ingress gateway that basically is an entry point into your Kubernetes cluster. You can think of the Istio ingress gateway as an alternative to engine ex ingress controller"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0029",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 29,
+        "total_chunks": 35,
+        "text": ". You can think of the Istio ingress gateway as an alternative to engine ex ingress controller. So Istio gateway runs as a pod in your cluster and acts as a load balancer by accepting incoming traffic in your cluster. And gateway will then direct traffic to one of your microservices inside the cluster using virtual service component. And you can configure Istio gateway using a gateway CRD. So now the traffic flow in your Kubernetes cluster with all these Istio components will look like this"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0030",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 30,
+        "total_chunks": 35,
+        "text": ". So now the traffic flow in your Kubernetes cluster with all these Istio components will look like this. So user will initiate a request to a web server microservice in your Kubernetes cluster. The request will first hit the gateway because it's the entry point of the cluster. Gateway will then evaluate the virtual service rules about how to route the traffic and will send it to web server microservice"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0031",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 31,
+        "total_chunks": 35,
+        "text": ". Gateway will then evaluate the virtual service rules about how to route the traffic and will send it to web server microservice. And finally that request will reach the proxy, the envoy proxy inside your web server microservice. The envoy proxy will evaluate the request and forward it to the actual web server container within the same pod using local host. Now the web server will initiate another request to a payment microservice for example"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0032",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 32,
+        "total_chunks": 35,
+        "text": ". Now the web server will initiate another request to a payment microservice for example. So the request will move from web server container to the web server proxy, which will then by applying the virtual service rules as well as destination rules and maybe some other configuration will communicate with the proxy, envoy proxy of payment microservice using mutual TLS"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0033",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 33,
+        "total_chunks": 35,
+        "text": ". And the same will repeat for communication between the payment service and database and all the way back the response will be returned to the UI. And during this overall request flow, the proxies will gather all the metrics and tracing information about the requests and send it back to the control plane. So we automatically have monitoring for our application. So that's it for this video. Subscribe to my channel for more content like this"
+    },
+    {
+        "chunk_id": "service_mesh_chunk_0034",
+        "doc_id": "service_mesh",
+        "title": "Service Mesh",
+        "topic": "microservices",
+        "source": "Service Mesh.mp4",
+        "chunk_index": 34,
+        "total_chunks": 35,
+        "text": ". So we automatically have monitoring for our application. So that's it for this video. Subscribe to my channel for more content like this. And if you want to see behind the scenes content and previews, follow me on Instagram as well. Thank you and see you in the next video."
+    }
+]

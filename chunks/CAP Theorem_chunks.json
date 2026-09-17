@@ -1,0 +1,202 @@
+[
+    {
+        "chunk_id": "cap_theorem_chunk_0000",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 0,
+        "total_chunks": 20,
+        "text": "The cap theorem is a useful principle in distributed systems that illustrates some of the difficult trade-offs that distributed systems have to make. However, it has somehow solidified itself as the E equals MC squared of the software engineering world. A cool piece of jargon that many people know and rattle off during interviews that sounds smart and knowledgeable, even when it's not really relevant"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0001",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 1,
+        "total_chunks": 20,
+        "text": ". As it turns out, the cap theorem is not an incredibly advanced concept that only the best engineers can comprehend. This is actually fairly intuitive and I'll explain why in this video. Let's go. The cap theorem revolves around three concepts which form the cap acronym, Consistency, Availability, and Partition Tolerance. I've covered two of these in my software engineering dictionary series, but they have slightly different meetings here, so I'm going to cover them again"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0002",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 2,
+        "total_chunks": 20,
+        "text": ". After that, we'll get to the theorem itself. Consistency in the cap theorem context means that when someone queries the system for information, the most up-to-date information is always returned. In a distributed system, multiple servers or nodes are reading and writing information and have to take extra care to maintain consistency. For example, we might ask a distributed system to write some info like one"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0003",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 3,
+        "total_chunks": 20,
+        "text": ". For example, we might ask a distributed system to write some info like one. The node receiving the request might broadcast the information to other nodes so that they get the most up-to-date information too. Then we might ask the system to write two. This system has consistency. If, after the system says, I'm done, query again always returns two. On the other hand, in a system without consistency, after the system says, I'm done, I could query a node and it could return stale information"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0004",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 4,
+        "total_chunks": 20,
+        "text": ". On the other hand, in a system without consistency, after the system says, I'm done, I could query a node and it could return stale information. For example, if I write three, then query a different node before the information propagates to it. It might return two, which is stale. We can some consistency up as, when the system returns information, it is always the latest information. The next term is availability. This one is easier"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0005",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 5,
+        "total_chunks": 20,
+        "text": ". The next term is availability. This one is easier. It means that all incoming requests receive a useful response. For example, if we query a distributed system, it is available if it returns useful data even if it's stale. As long as it returns something, it's considered available. On the other hand, if it isn't able to handle my request, then it's not available. We can sum this one up as, the system always returns info and never stops functioning"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0006",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 6,
+        "total_chunks": 20,
+        "text": ". We can sum this one up as, the system always returns info and never stops functioning. The last one is partition tolerance, which is about reacting to a network partition. A network partition is when some of the nodes in a distributed system are enabled to contact each other. It's like the scene in a horror movie, when a wall comes down and separates the protagonist into two parties, and each party has to fend for itself"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0007",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 7,
+        "total_chunks": 20,
+        "text": ". It's like the scene in a horror movie, when a wall comes down and separates the protagonist into two parties, and each party has to fend for itself. When a network partition happens, any communication between any set of nodes might be cut off, like this, or like this, so the network is partitioned into pieces. System tolerance means that during a partition, the system can continue to operate. A system without partition tolerance simply goes down if there's a network partition"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0008",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 8,
+        "total_chunks": 20,
+        "text": ". A system without partition tolerance simply goes down if there's a network partition. Those are the three pieces of the cap theorem. Here's a quick recap. Consistency is when the system returns info, it's always the latest info. Availability is the system always returns some information even if it's stale. And partition tolerance is when the system can continue operating during a network partition. Now back to the cap theorem"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0009",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 9,
+        "total_chunks": 20,
+        "text": ". And partition tolerance is when the system can continue operating during a network partition. Now back to the cap theorem. The cap theorem states that you could have only two of the three properties in a distributed system, but not all three. For example, if you design a system with consistency and availability, it can't also be partition tolerance. If you design a system with consistency and partition tolerance, it can have availability"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0010",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 10,
+        "total_chunks": 20,
+        "text": ". If you design a system with consistency and partition tolerance, it can have availability. So there are three possible choices, C and A, C and P, and A and P. We can cover what this means case by case. If first one is C and A, this means that our system can have consistency and availability, but can't be partition tolerant. In other words, if there is no network partition, we can guarantee consistency and availability"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0011",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 11,
+        "total_chunks": 20,
+        "text": ". In other words, if there is no network partition, we can guarantee consistency and availability. This generally makes sense because when a network partition isn't happening, the system is running normally and thus can have both consistency and availability because there's no need to make trade-offs. That means it can always respond to every request with the latest information"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0012",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 12,
+        "total_chunks": 20,
+        "text": ". That means it can always respond to every request with the latest information. Now, if there's a partition, what should we do? Well, if we want to keep operating during a partition, we need either C and P or A and P. In other words, if there is a partition, we must choose between consistency and availability. This is the crux of the theorem. In fact, the cap theorem could be rewarded like this to be much clear"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0013",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 13,
+        "total_chunks": 20,
+        "text": ". This is the crux of the theorem. In fact, the cap theorem could be rewarded like this to be much clear. During a network partition, a distributed system must choose between consistency and availability. In my opinion, the pick two terminology is confusing and hard to understand, which could be why people like to quote it because it sounds cool"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0014",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 14,
+        "total_chunks": 20,
+        "text": ". In my opinion, the pick two terminology is confusing and hard to understand, which could be why people like to quote it because it sounds cool. So why, during a partition, do we need to choose between consistency and availability? Well, during a partition, the network is cut into pieces so the different pieces of the system have to independently make a decision"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0015",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 15,
+        "total_chunks": 20,
+        "text": ". Should they keep accepting traffic or should they stop because there is a partition? If they keep accepting traffic, which means they keep availability, they run the risk of creating inconsistency because each piece might claim to be the authoritative system. Remember that during a partition, the pieces can't talk to each other so they don't know if the other pieces are still operating or have died. The client could write data to one of the pieces, then write some data to a different piece"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0016",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 16,
+        "total_chunks": 20,
+        "text": ". The client could write data to one of the pieces, then write some data to a different piece. Then, if the network partition heals, there's a conflict between the two pieces that needs to be resolved, which can get pretty messy. On the other hand, if the system stops accepting traffic while there is a partition, then it loses availability, but preserves consistency. That's why a partition forces a system to choose"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0017",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 17,
+        "total_chunks": 20,
+        "text": ". That's why a partition forces a system to choose. To recap, the cap theorem is about how a system must pick two properties between consistency, availability, and partition tolerance, and can't pick all three. However, it's more clearly stated as, during normal operation, a distributed system can have consistency and availability, but during a network partition, it must choose between consistency and availability"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0018",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 18,
+        "total_chunks": 20,
+        "text": ". And why? Because it has to decide between accepting traffic, which preserves availability, but could lose consistency by potentially creating diverging data sets, or stop accepting traffic, which preserves consistency, but loses availability. The last thing I'll mention is that people are always working on better algorithms, which allow hybrids of consistency and availability during partition"
+    },
+    {
+        "chunk_id": "cap_theorem_chunk_0019",
+        "doc_id": "cap_theorem",
+        "title": "CAP Theorem",
+        "topic": "distributed_system",
+        "source": "CAP Theorem.mp4",
+        "chunk_index": 19,
+        "total_chunks": 20,
+        "text": ". However, there is no solution that provides a hundred percent consistency and availability during a partition. I hope that was helpful, and that now the cap theorem doesn't seem all that intimidating. If you liked this video, please consider sharing it with someone who did joy it too. Thanks!"
+    }
+]

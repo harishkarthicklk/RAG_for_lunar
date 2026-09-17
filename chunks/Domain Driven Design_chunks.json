@@ -1,0 +1,312 @@
+[
+    {
+        "chunk_id": "domain_driven_design_chunk_0000",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 0,
+        "total_chunks": 31,
+        "text": "In my previous video, I introduced the concept of domain-reven design and especially the business domain. Today, we will take it further by exploring how companies operate, why they exist, their goals and the strategies they use to achieve them. Now you might think, why do I need to know this? I am here to write software, not run a business. And the answer is simple. To design effective software, you need to understand the bigger picture. The problem isn't just the code"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0001",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 1,
+        "total_chunks": 31,
+        "text": ". And the answer is simple. To design effective software, you need to understand the bigger picture. The problem isn't just the code. It's about building a system that aligns with company's goals and delivers value. We will use domain-reven design tools to analyze the company's business domain and structure, breaking it down into core, supporting and generic domains"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0002",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 2,
+        "total_chunks": 31,
+        "text": ". This leads the foundation for thoughtful software design and in future videos, we will explore how these concepts shape the design process. So let's get started. So what is a business domain? A business domain represents a primary area of activity for a company. The core service or value it offers to its customers. For example, Netflix focuses on streaming entertainment. Tesla is known for its electrical vehicles and IKEA specializes in affordable, ready-to-assemble furniture"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0003",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 3,
+        "total_chunks": 31,
+        "text": ". Tesla is known for its electrical vehicles and IKEA specializes in affordable, ready-to-assemble furniture. Some companies operate across multiple business domains. For instance, Apple delivers both consumer electronics and digital services such as the App Store and Apple Music. Google is involved in search engines, online advertising and cloud computing among other areas. Business domains can evolve over time as companies adapt to new opportunities. Take Samsung as an example"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0004",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 4,
+        "total_chunks": 31,
+        "text": ". Business domains can evolve over time as companies adapt to new opportunities. Take Samsung as an example. It started as a trading company and has since diversified into electronics, shipbuilding and even semiconductors. Similarly, Nintendo transitioned from producing playing cards to becoming a global leader in video game consoles and software. Now, a subdomain is a specific area of business activity that helps the company achieve its broader business goals"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0005",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 5,
+        "total_chunks": 31,
+        "text": ". Now, a subdomain is a specific area of business activity that helps the company achieve its broader business goals. Together, all subdomains form the company's business domain. Each subdomain is like a building block on its own. It isn't enough to ensure success, but collectively they enable the company to operate effectively. For example, Starbucks isn't just about making great coffee. It also involves real estate decisions, hiring staff, managing finances and marketing"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0006",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 6,
+        "total_chunks": 31,
+        "text": ". For example, Starbucks isn't just about making great coffee. It also involves real estate decisions, hiring staff, managing finances and marketing. These subdomains must work together to build a successful coffee house chain. Domain-driven design identifies three types of subdomains, each with a unique strategic value. Core subdomains differentiate a company from its competitors. They involve innovations, optimizations or intellectual property that directly impact profitability"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0007",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 7,
+        "total_chunks": 31,
+        "text": ". They involve innovations, optimizations or intellectual property that directly impact profitability. For instance, over initially disrupted transportation with ride sharing and later optimized costs by matching riders heading in the same direction. Google search ranking algorithm is a core subdomain, as it drives traffic to Google ads a major revenue source. Now, core subdomains aren't always technical. A company's edge can come from unique expertise or creativity"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0008",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 8,
+        "total_chunks": 31,
+        "text": ". Now, core subdomains aren't always technical. A company's edge can come from unique expertise or creativity. For instance, a jewelry maker's designs are its core subdomain, not its online store. Customers remember brand for its unique designs, not the website. A fraud detection company's core lies in its trained analyst, not the software they use. Core subdomains are about what sets a company apart. Whether it's through technical innovation or specialized know-how"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0009",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 9,
+        "total_chunks": 31,
+        "text": ". Core subdomains are about what sets a company apart. Whether it's through technical innovation or specialized know-how. Now, core subdomains are also referred to as core domains. In the original domain-driven design work by Eric Evans, it uses that terms core subdomain and core domain interchangeably. Now while core domain is commonly used, will stick with core subdomain to avoid confusion with the broader concept of business domains"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0010",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 10,
+        "total_chunks": 31,
+        "text": ". Now while core domain is commonly used, will stick with core subdomain to avoid confusion with the broader concept of business domains. Generic subdomains are business activities that most companies perform in a similar way. While they can be complex to implement, they don't offer a competitive advantage. Instead of innovating, companies typically rely on proven, widely available solutions. For example, user authentication is a generic subdomain"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0011",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 11,
+        "total_chunks": 31,
+        "text": ". Instead of innovating, companies typically rely on proven, widely available solutions. For example, user authentication is a generic subdomain. Most companies used established frameworks for reliability and security rather than creating their own. Supporting subdomains are essential for the business, but don't directly drive competitive advantage. Supporting subdomains are typically simple involving basic operations like data entry or crud task"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0012",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 12,
+        "total_chunks": 31,
+        "text": ". Supporting subdomains are typically simple involving basic operations like data entry or crud task. These areas don't require high entry barriers and serve as tools to enable core activities. The chart here illustrates how the three subdomain types relate to business differentiation and complexity. The overlap between supporting and generic subdomains is a great area. It depends"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0013",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 13,
+        "total_chunks": 31,
+        "text": ". The overlap between supporting and generic subdomains is a great area. It depends. If a generic solution exists for a supporting subdomain, its type is determined by whether integrating that solution is simpler or more cost effective than building it from scratch. Only core subdomains give a company a competitive edge. They are what set it apart. Generic subdomains don't provide any advantage since they are the same solution used by competitors"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0014",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 14,
+        "total_chunks": 31,
+        "text": ". They are what set it apart. Generic subdomains don't provide any advantage since they are the same solution used by competitors. Supporting subdomains are low cost and low impact. Companies often prefer them to be ready-made solutions to save effort. Core subdomains are complex and unique. They are designed to tackle tough problems competitors can't easily replicate. Generic subdomains like authentication are complicated but widely understood with solutions readily available"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0015",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 15,
+        "total_chunks": 31,
+        "text": ". Generic subdomains like authentication are complicated but widely understood with solutions readily available. And supporting subdomains are the simplest, often limited to crud operations or basic data handling. And here are some key questions to help you identify subdomains. Is it essential for standing out? Then that's a core subdomain. Could it be outsourced or pre-built? So then that's generic. And if it is simple but necessary, then that can be considered as supporting"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0016",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 16,
+        "total_chunks": 31,
+        "text": ". Could it be outsourced or pre-built? So then that's generic. And if it is simple but necessary, then that can be considered as supporting. The stable summarizes the aspects in which the three types of subdomains differ. Core subdomains are constantly evolving. Companies must refine, optimize and innovate to stay ahead of competitors. For example, Oberst-Rite sharing algorithm is a core subdomain. Crucial for efficiently matching drivers and riders and providing a competitive edge"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0017",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 17,
+        "total_chunks": 31,
+        "text": ". For example, Oberst-Rite sharing algorithm is a core subdomain. Crucial for efficiently matching drivers and riders and providing a competitive edge. These subdomains require in-house development, advanced engineering practices and top talent. Generic subdomains while complex are already solved problems. For instance, user authentication is a generic subdomain. Companies often rely on ready-made solutions like OOT or SAML. Supporting subdomains are simple and rarely changed"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0018",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 18,
+        "total_chunks": 31,
+        "text": ". Companies often rely on ready-made solutions like OOT or SAML. Supporting subdomains are simple and rarely changed. They are essential for operations but don't offer any competitive advantage. For example, an online stores inventory management system is a supporting subdomain. It's necessary but doesn't differentiate the business. These subdomains can be implemented quickly with basic tools, outsourced or used as training projects for junior engineers"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0019",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 19,
+        "total_chunks": 31,
+        "text": ". These subdomains can be implemented quickly with basic tools, outsourced or used as training projects for junior engineers. Identifying subdomains is crucial for making informed design decisions. For instance, consider a hospital. It might have departments like patient care, billing, pharmacy and diagnostics. While these are broad categories, digging deeper reveals finer components. Take the patient care department"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0020",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 20,
+        "total_chunks": 31,
+        "text": ". While these are broad categories, digging deeper reveals finer components. Take the patient care department. It may involve activities like scheduling, supporting, maintaining electronic medical records and a unique AI-driven triage system. If the triage system analyzes symptoms and assigns patients to specialists more effectively than competitors, it becomes a core subdomain offering distinct advantage in healthcare delivery"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0021",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 21,
+        "total_chunks": 31,
+        "text": ". Now, we can't keep drilling effortlessly into details when identifying subdomains. So when do we stop? A good rule of thumb is to treat subdomains as coherent set of related use cases. These use cases share the same actors, business entities and closely connected data. For example, the credit card team in Gateway, as shown in the diagram, consists of tightly connected use cases such as authorized capture, verify, roll back and credit"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0022",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 22,
+        "total_chunks": 31,
+        "text": ". These use cases involve the same key actors, merchants, customers and their respective banks. And operate on shared data like payment details and account balances. Together, these interconnected activities form the credit card payment subdomain. And since they are so closely linked in purpose and data, the subdomains represent a natural boundary. Breaking it down further might disrupt its coherence, making this the ideal point to stop sub-dividing"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0023",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 23,
+        "total_chunks": 31,
+        "text": ". Breaking it down further might disrupt its coherence, making this the ideal point to stop sub-dividing. Let's bring the concept of subdomains to life with an example. Meet Food Fusion. Our meal delivery company that uses a mobile app to recommend meals based on user's diet preferences and past orders. It also ensures timely delivery through optimized logistics. The business domain here is a meal delivery, supported by different types of subdomains"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0024",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 24,
+        "total_chunks": 31,
+        "text": ". It also ensures timely delivery through optimized logistics. The business domain here is a meal delivery, supported by different types of subdomains. Our core subdomains, like the recommendation engine, delivery optimization and user experience, are at the heart of food fusion success. The recommendation engine personalizes meal suggestions, driving customer satisfaction and loyalty. Delivery optimizations ensures fast reliable service building trust"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0025",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 25,
+        "total_chunks": 31,
+        "text": ". Delivery optimizations ensures fast reliable service building trust. And a seamless app interface keeps user engaged, directly impacting retention. Generic subdomains like payment processing and user authentication are critical, but don't differentiate the company. These are well solved problems that can be handled by existing solutions, saving time and effort. Finally, supporting subdomains include recipe database integration and order history tracking"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0026",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 26,
+        "total_chunks": 31,
+        "text": ". Finally, supporting subdomains include recipe database integration and order history tracking. The logic is straightforward and resembles crowd operations. These are simple, necessary features that enable core functionality, but don't provide a competitive edge. For example, integrating a recipe database is necessary for meal recommendations, but doesn't differentiate the company. Now, let's see how this classification influences our design decisions"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0027",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 27,
+        "total_chunks": 31,
+        "text": ". Now, let's see how this classification influences our design decisions. Core subdomains demand in-house development with advanced tools and top talent to maintain innovation. Generic subdomains can rely on after-shelf solutions for efficiency. And supporting subdomains, being less critical, can use simpler tools or even be outsourced, allowing the company to focus resources where they matter most"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0028",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 28,
+        "total_chunks": 31,
+        "text": ". Now that we have explored business domains and subdomains, let's touch on an important concept for future discussions. Domain experts. These are the subject matter experts who deeply understand the business we are modeling and implementing in a software. Domain experts aren't the analyst gathering requirements or the engineers designing the system. They are the ones who identified the business problem and hold the knowledge we are translating into software"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0029",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 29,
+        "total_chunks": 31,
+        "text": ". They are the ones who identified the business problem and hold the knowledge we are translating into software. Think of them as the bridge between the business and the tech team. For example, in a hospital management system, domain experts might include doctors, nurses and administrative staff who use the software daily. They bring the insights needed to ensure the system solves the real world problems effectively"
+    },
+    {
+        "chunk_id": "domain_driven_design_chunk_0030",
+        "doc_id": "domain_driven_design",
+        "title": "Domain Driven Design",
+        "topic": "microservices",
+        "source": "Domain Driven Design.mp4",
+        "chunk_index": 30,
+        "total_chunks": 31,
+        "text": ". They bring the insights needed to ensure the system solves the real world problems effectively. In my next video, we'll dive deeper into how domain experts collaborate with technical teams to create meaningful solutions."
+    }
+]

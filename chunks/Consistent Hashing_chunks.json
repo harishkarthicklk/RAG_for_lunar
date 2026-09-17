@@ -1,0 +1,142 @@
+[
+    {
+        "chunk_id": "consistent_hashing_chunk_0000",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 0,
+        "total_chunks": 14,
+        "text": "All right, let's imagine we have a large key value database, a distributed across many nodes or we have a cluster of nodes handling some web service. Well, how do we balance the load fairly in the cluster? Well, simple, user load balancer, but how will the load balancer solve this problem? Let's try to explore some ideas and get to consistent hashing which is the topic for this video. Okay, so we have an incoming key which node should store it and serve it"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0001",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 1,
+        "total_chunks": 14,
+        "text": ". Okay, so we have an incoming key which node should store it and serve it. And what I'm talking about is not only in the context of a database, but any service with a load balancer. In that case, we can have some kind of ID from the requests to act as a key. Okay, so let's say we have got five nodes and we put these five nodes in five slots, number zero to four. And now we have got the key, we take it and then we hash it. And let's say this hash function always gives us a number"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0002",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 2,
+        "total_chunks": 14,
+        "text": ". And now we have got the key, we take it and then we hash it. And let's say this hash function always gives us a number. Then we mod that number with the number of slots we have. What we get can be treated as a slot number. If the hash function is a good one, the slots number we get from this keys will be equally distributed. And then we send the key to the node in the slot when it's retrieving, we fetch it from this node to"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0003",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 3,
+        "total_chunks": 14,
+        "text": ". And then we send the key to the node in the slot when it's retrieving, we fetch it from this node to. Now, obviously, these are some problems or I wouldn't have started the video with this approach. So let's say node three goes down and that slot is empty. We have to now reduce one slot. And now we have to mod the hash by a different number. So what is the problem with this? Well, there is a lot of key assignments"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0004",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 4,
+        "total_chunks": 14,
+        "text": ". And now we have to mod the hash by a different number. So what is the problem with this? Well, there is a lot of key assignments. All the keys might have new homes now as a result of our calculation is now different. And a lot of caches have to be invalidated. A lot of keys have to be moved from one node to the other. Okay, let's do one thing. Let's still have the same number of slots and keep the nodes wherever they are. And some request is the empty slot, let's say"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0005",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 5,
+        "total_chunks": 14,
+        "text": ". Let's still have the same number of slots and keep the nodes wherever they are. And some request is the empty slot, let's say. We just take the node which is the right nearest to it. Most keys state the simplest. We just have to move the keys from the node that just got down. Curi. It solves node reducing. But what happens when nodes get added? The solution can be having much more slots than we require. Maybe 10 for understanding. And we distribute the nodes among the slots well equally"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0006",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 6,
+        "total_chunks": 14,
+        "text": ". Maybe 10 for understanding. And we distribute the nodes among the slots well equally. But how do we distribute it? We pass the node IDs, maybe a unique ID we get from the node through the same calculation. hash it and then mod it with the number of slots. We can now assign this slot to a node. We can do the same with new incoming nodes and well solve a problem. Now when requests come, we can choose the first right words node from that keys slot"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0007",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 7,
+        "total_chunks": 14,
+        "text": ". Now when requests come, we can choose the first right words node from that keys slot. But what happens when the key lands at the far right end of the slots? There is no right nearest node. Let's do one thing. Let's imagine this slot synoding like the one ring to rule them all. And now instead of the nearest right node, we take the nearest clockwise node. And while you 10 slots now, let's have three six six slots. Let's have one slot for each angle"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0008",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 8,
+        "total_chunks": 14,
+        "text": ". And while you 10 slots now, let's have three six six slots. Let's have one slot for each angle. You can divide the ring into as many paths as many slots as you want. Now a lot of problems seem solved. When a server comes close down, a lot of keys does not have to be reassigned. Same for when a server comes up. And this is consistent ashing guys distributed ashing scheme that operates irrespective of the number of nodes we have. So all our problems seem solved. No"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0009",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 9,
+        "total_chunks": 14,
+        "text": ". So all our problems seem solved. No. We might say theoretically that our hash function is perfect and it distributes the node uniformly across the slots, but it not always true. There might be skews and there might be too much load on one server. So let's say node three goes down and node four has to solve all the load of node three. Ideally, it should be distributed among all other nodes equally. So here comes the final idea for this video. Let's assign multiple slots to one node"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0010",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 10,
+        "total_chunks": 14,
+        "text": ". So here comes the final idea for this video. Let's assign multiple slots to one node. What do you mean by that? Let's say we take each node ID and pass it through multiple hash function. Let's say four. And like before, we mod each of them with a number of slots. Now we assign this set of slots to one node. Now all these nodes have become like some virtual nodes on this ring. First of all, one thing is clear now that having skews in this structure is very hard. Now let's say a node goes down"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0011",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 11,
+        "total_chunks": 14,
+        "text": ". First of all, one thing is clear now that having skews in this structure is very hard. Now let's say a node goes down. All the slots for this node is empty now. But now the keys it to are serving can be taken up by multiple nodes instead of one. As it was not serving node from a single point in the circle or the ring but from multiple points. So okay, let's have a recap. When a key comes, we find a slot for it by hashing and modding it by the number of slots"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0012",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 12,
+        "total_chunks": 14,
+        "text": ". So okay, let's have a recap. When a key comes, we find a slot for it by hashing and modding it by the number of slots. We send this key to the nearest clockwise node then. Now to add a new node, we take the node ID, pass it through a few hash functions, mod it with the number of slots and assign this slots to that node. When a node goes down, it's fine for us. We get a slot for our key and route it to the right nearest node. Well now you know a bit about consistent hashing"
+    },
+    {
+        "chunk_id": "consistent_hashing_chunk_0013",
+        "doc_id": "consistent_hashing",
+        "title": "Consistent Hashing",
+        "topic": "distributed_system",
+        "source": "Consistent Hashing.mp4",
+        "chunk_index": 13,
+        "total_chunks": 14,
+        "text": ". We get a slot for our key and route it to the right nearest node. Well now you know a bit about consistent hashing. You can read more about it from the links I'll leave in the description. So leave a like and subscribe to the channel. That's it for now. See you in the next one."
+    }
+]

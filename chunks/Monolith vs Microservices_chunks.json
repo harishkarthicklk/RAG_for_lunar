@@ -1,0 +1,102 @@
+[
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0000",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 0,
+        "total_chunks": 10,
+        "text": "Micro services. Micro means small, but how small exactly? And service means well, bit, does something? It's probably more helpful to understand what microservices are not, a monolith. A traditional architecture where a whole system is built as one unified self-contained application. It might start small, but over time we add new endpoints and new database tables, and eventually we have one giant code base that does everything"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0001",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 1,
+        "total_chunks": 10,
+        "text": ". It might start small, but over time we add new endpoints and new database tables, and eventually we have one giant code base that does everything. It's very easy for interactions to end up all over the place, and we end up with a big ball of mud. A haphazardly structured sprawling, sloppy duct tape and failing wire spaghetti code jungle. The code lacks any structure. Developers have just called any code from anywhere, and over time the system became too complex. So we need some clear structure"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0002",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 2,
+        "total_chunks": 10,
+        "text": ". Developers have just called any code from anywhere, and over time the system became too complex. So we need some clear structure. We need concepts to live in certain areas of the software and not to leak into others. We divide the large system into smaller, manageable subsystems. We only allow a certain few interactions between boundaries by making some code internal or private, hidden away and inaccessible by the rest of the software"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0003",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 3,
+        "total_chunks": 10,
+        "text": ". These subsystems are isolated modules all hosted within this large application. This architecture is called the modular monolith. We can get some clean, loosely coupled code that's easy to understand and easy to navigate. We could leave this architecture as it is, or we could host each of these independent modules as totally separate processes. These are microservices. Each service can be updated independently. We can deploy changes to one service while the others continue running"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0004",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 4,
+        "total_chunks": 10,
+        "text": ". These are microservices. Each service can be updated independently. We can deploy changes to one service while the others continue running. They could each run on different machines which can scale independently. Performance bottlenecks are easier to identify if we find that say one service is using lots of CPU. And if one service fails, the others can still handle requests as normal. Each service uses its own database too, which is similar benefits to the independent services"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0005",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 5,
+        "total_chunks": 10,
+        "text": ". Each service uses its own database too, which is similar benefits to the independent services. They can each fail without taking the other databases down and they can scale independently. Services communicate with each other over a network using some API, whether that's HTTP requests or using a message queue. We need to ensure that we don't deploy breaking changes to an API that is being used by another service, so the boundaries between services become much more difficult to change"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0006",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 6,
+        "total_chunks": 10,
+        "text": ". Network calls are much slower than the inter-process communication that was allowed before, and it usually involves writing a lot more code to handle the call. All of these constraints can feel like a bad thing, but the benefit is they formalise the boundaries between the systems. Developers are incentivised not to rely on passing information between boundaries too much, and instead build loosely coupled systems that don't depend on each other to function"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0007",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 7,
+        "total_chunks": 10,
+        "text": ". Choosing the wrong boundaries leads to the worst of both worlds, a distributed ball of mud, where not only do we have spaghetti code, now there's a network involved where everything is slower and more prone to errors. A common mistake is to make the services too small. Nanoservices is a term sometimes used to describe tiny services that only contain one function"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0008",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 8,
+        "total_chunks": 10,
+        "text": ". A common mistake is to make the services too small. Nanoservices is a term sometimes used to describe tiny services that only contain one function. This might be an acceptable size for some services, but be careful not to fall into the trap of making services that depend too much on others. Title coupled services means multiple services would need change into achieved most tasks, which defeats the point. So we need to find cohesive groups of functionality that belong together"
+    },
+    {
+        "chunk_id": "monolith_vs_microservices_chunk_0009",
+        "doc_id": "monolith_vs_microservices",
+        "title": "Monolith vs Microservices",
+        "topic": "microservices",
+        "source": "Monolith vs Microservices.mp4",
+        "chunk_index": 9,
+        "total_chunks": 10,
+        "text": ". So we need to find cohesive groups of functionality that belong together. We can build domain-oriented microservices following DDD to find bounded context-freeze service, or design services with the organizational structure in mind, so that teams own their services and understand them well and get very good at maintaining them. However you do it, just make sure to avoid that distributed ball of mud."
+    }
+]

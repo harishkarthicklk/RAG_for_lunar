@@ -1,0 +1,92 @@
+[
+    {
+        "chunk_id": "fault_tolerance_chunk_0000",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 0,
+        "total_chunks": 9,
+        "text": "Welcome to today's video on fault tolerance. We'll share all the details of creating the fault tolerant designs that keep society's most critical systems and equipment up and running in the face of system failures. Fault tolerance is a system's ability to continue functioning in the presence of a fault or failure. Whether it's a technical glitch, a hardware malfunction, or a software hiccup, a fault tolerant system keeps on ticking"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0001",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 1,
+        "total_chunks": 9,
+        "text": ". Whether it's a technical glitch, a hardware malfunction, or a software hiccup, a fault tolerant system keeps on ticking. Systems or equipment with a high fault tolerance can partially or completely maintain their operations despite a fault. Reliability and design engineers plan meticulously to anticipate potential failures, causes, and consequences to incorporate fault tolerance characteristics into the world around us"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0002",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 2,
+        "total_chunks": 9,
+        "text": ". They use techniques like failure mode effect analysis, FMEA, and fault tree analysis, FTA, help uncover potential failures that can be addressed in the design process. Because of the resources and investment involved, only the most important and impactful failures are accounted for in a good fault tolerant design. In order to maintain cost effectiveness in the design process, fault tolerance is only applied to the faults that are significant enough to warrant it"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0003",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 3,
+        "total_chunks": 9,
+        "text": ". Fault tolerance techniques serve a purpose at every stage of a system's life cycle. From conception and design to validation, maintenance, and disposal, fault tolerance techniques and characteristics are applied at every step. Fault detection and display is where it all begins. Fault detection is the foundation of fault tolerance, while display is the mechanism that triggers a fix for the fault"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0004",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 4,
+        "total_chunks": 9,
+        "text": ". Fault detection is the foundation of fault tolerance, while display is the mechanism that triggers a fix for the fault. A system needs the ability to sense and display a fault accurately, such as the tire pressure monitoring system that alerts a driver when the tire pressure level is outside an optimal range. In complex systems, detection isn't enough"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0005",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 5,
+        "total_chunks": 9,
+        "text": ". In complex systems, detection isn't enough. Fault diagnosis pinpoints the issue's location and triggers containment strategies to prevent further damage, such as the opening of a safety valve to release exhaust when a tank pressure's reading gets too high. Some systems use IoT technology to mask faults. This is crucial for cybersecurity, preventing hackers from manipulating equipment data like those used in power grids"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0006",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 6,
+        "total_chunks": 9,
+        "text": ". This is crucial for cybersecurity, preventing hackers from manipulating equipment data like those used in power grids. Fault masking ensures the system can identify and conceal incorrect values, preventing a failure from spreading within a system. Using redundancies or backup systems to take over operation if the primary system fails is one of the most effective ways to improve fault tolerance. Active redundancies"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0007",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 7,
+        "total_chunks": 9,
+        "text": ". Active redundancies. Active redundancies involve simultaneous operation of multiple systems, like using two pumps to achieve a goal. Passive redundancies involve standby systems that take over only when needed. Operating passive redundancies are running on standby alongside the primary system. Non-operating redundancies are powered down until needed. Our society's critical systems, equipment and infrastructure will always require maintenance and repair"
+    },
+    {
+        "chunk_id": "fault_tolerance_chunk_0008",
+        "doc_id": "fault_tolerance",
+        "title": "Fault Tolerance",
+        "topic": "distributed_system",
+        "source": "Fault Tolerance.mp4",
+        "chunk_index": 8,
+        "total_chunks": 9,
+        "text": ". Our society's critical systems, equipment and infrastructure will always require maintenance and repair. But fault tolerant design improves reliability and ensures continued operation in the face of system failures until corrective actions can be taken. To learn more about fault tolerance, system reliability or other maintenance strategies, subscribe or visit LimboCMMS.com"
+    }
+]

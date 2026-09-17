@@ -1,0 +1,272 @@
+[
+    {
+        "chunk_id": "eventual_consistency_chunk_0000",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 0,
+        "total_chunks": 27,
+        "text": "We improve the scalability of the system, but at some cost. We can either have consistency or availability. In case of strong consistent system, the movement data is updated by one user. The same data is available in all the nodes. Updated values will be synced to all the nodes, but not immediately. Now we can achieve eventual consistency in our system"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0001",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 1,
+        "total_chunks": 27,
+        "text": ". Updated values will be synced to all the nodes, but not immediately. Now we can achieve eventual consistency in our system. What if the message delivery itself fails? What should we choose while designing our system? Why eventual consistency is needed in microservices? In the last two videos, we have looked at two face commit and three face commit, which are traditional protocols that try to keep the distributed operations in sync"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0002",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 2,
+        "total_chunks": 27,
+        "text": ". Today, we will see a modern approach which has been adopted widely in the industry. In the distributed systems, we know we have multiple nodes and data is getting stored at different locations to ensure high availability and make sure our system is more fault-all-length. With this, we improve the scalability of the system, but at some cost"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0003",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 3,
+        "total_chunks": 27,
+        "text": ". With this, we improve the scalability of the system, but at some cost. We have already learned that in our cap theorem video, that for a distributed system, when there is an network partition, we can either have consistency or availability. Now, by storing the data at multiple servers, we have achieved availability. Because if one node is down, then user will be served with the other nodes data. Now let's understand what is data consistency in distributed systems"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0004",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 4,
+        "total_chunks": 27,
+        "text": ". Now let's understand what is data consistency in distributed systems. In distributed system, it is possible that one user is reading the data and other user might be updating the data. And also, it's highly likely that both the users are connected to different nodes in the system. Imagine you write an update to node 1, and that change takes time to get sync to node 2 due to replication lag. Then node 1 and node 2 will temporarily have different and inconsistent version of same data"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0005",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 5,
+        "total_chunks": 27,
+        "text": ". Then node 1 and node 2 will temporarily have different and inconsistent version of same data. At this moment, if some user requested the data and is served from the node 2, then there is a high chance that user will be served with the outdated data. So, how this problem can be handled? Not to handle the consistency, we have two different categories of models. One that supports strong consistency and the other one that supports eventual consistency"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0006",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 6,
+        "total_chunks": 27,
+        "text": ". One that supports strong consistency and the other one that supports eventual consistency. In case of strong consistent system, the moment data is updated by one user, the same data is available in all the nodes. So that any read that happens after that update will return the updated value. Two face commit and three face commit are the strategies that falls under strong consistency model, which we have already discussed in the previous part"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0007",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 7,
+        "total_chunks": 27,
+        "text": ". On the other hand, in case of eventually consistent system, updated values will be synced to all the nodes but not immediately. It can take few milliseconds or seconds depending on the business requirements and the replication strategy. There is no guarantee about how soon this sync will happen. During the time sync up is not completed, different nodes will serve different versions of data, which may lead to the temporary inconsistencies. Now, let us understand this with a very simple example"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0008",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 8,
+        "total_chunks": 27,
+        "text": ". Now, let us understand this with a very simple example. Imagine you are updating your profile picture on social media application. For that, you log into the social media platform and update your profile picture. That profile picture update let's say send to node1 because maybe that is closest to you. So you are connected to node1. So, the updated profile picture will be updated on node1 only. Now node1 updates your profile picture and instantly replies done"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0009",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 9,
+        "total_chunks": 27,
+        "text": ". So, the updated profile picture will be updated on node1 only. Now node1 updates your profile picture and instantly replies done. That is the profile picture is updated. But behind the scenes, node1 starts sharing the new picture with node2 and node3 which are also another nodes in the distributed system. Now, because you are very excited to share this new profile picture with your friend, so you tell a friend across the country to check out your profile"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0010",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 10,
+        "total_chunks": 27,
+        "text": ". Your friend logged into the social media platform and their request goes to node2 which has not received your updated profile picture yet. So they will see your old photo. But a few seconds later, node2 and node3 will catch up. Now all the nodes show the latest photo. This is eventual consistency in action. Here you can observe one behavior. You immediately see the new updated photo on your profile because you are connected to the same node which has the updated data"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0011",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 11,
+        "total_chunks": 27,
+        "text": ". You immediately see the new updated photo on your profile because you are connected to the same node which has the updated data. But a friend on the other side of the world might see your old photo for a few seconds due to replication lag. After all the nodes are synced, everyone sees the updated photo"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0012",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 12,
+        "total_chunks": 27,
+        "text": ". After all the nodes are synced, everyone sees the updated photo. This temporary inconsistencies acceptable in few types of systems like social media platforms where it is okay to see outdated data for some time for the sake of availability and fault tolerance. We can use it for social media details. For example, like count and shares, it is acceptable to have temporary inconsistent data without impacting the user experience"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0013",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 13,
+        "total_chunks": 27,
+        "text": ". For example, like count and shares, it is acceptable to have temporary inconsistent data without impacting the user experience. Also, the recommendation systems are a very good use case for eventual consistency. Now let us understand how we can achieve eventual consistency in our system. We can implement the eventual consistency using combination of few design patterns. First one is asynchronous messaging or even driven messaging"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0014",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 14,
+        "total_chunks": 27,
+        "text": ". We can implement the eventual consistency using combination of few design patterns. First one is asynchronous messaging or even driven messaging. So in this instead of waiting for a response, we use a message broker as a middleware. So we publish the message let's say to a Kafka topic and then other services will consume that message and process accordingly. This means the calling service can move on and rest of the processing can happen eventually in other service"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0015",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 15,
+        "total_chunks": 27,
+        "text": ". This means the calling service can move on and rest of the processing can happen eventually in other service. When the order service places an order, it publishes an even to the order topic with the status order placed and then the inventory and notification services consume that message and update their state to reduce the stock and send the order confirmation email. This is also the basic idea behind saga design pattern as well. We will discuss that in detail in our next part"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0016",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 16,
+        "total_chunks": 27,
+        "text": ". This is also the basic idea behind saga design pattern as well. We will discuss that in detail in our next part. Now we see one service publishes a message to the broker. Now what if the message delivery itself fails? In that case, we can opt for retries, but using retry can lead to another problem which is duplicate actions and to handle that all the operation must be add-emputant"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0017",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 17,
+        "total_chunks": 27,
+        "text": ". Add-emputant means if we run the same operation multiple times, it will have the same effect as if we are running it only one. Let's discuss one more scenario by using the same order service example. So before publishing the even to Kafka topic, the service will write the data to its local database. Now what if the service updated the local database, but crashes before publishing the even to Kafka? To avoid this, we can use design patterns such as outbox pattern"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0018",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 18,
+        "total_chunks": 27,
+        "text": ". It is used to reliably publish the message without losing them. In this instead of directly publishing to Kafka or RebidemQ, we first write the even to local database table that acts as an outbox component. Then a separate service or a thread will read that table and publishes it into the desired message broker. We will discuss the outbox design pattern in detail as well in the upcoming videos"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0019",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 19,
+        "total_chunks": 27,
+        "text": ". We will discuss the outbox design pattern in detail as well in the upcoming videos. So now the big question is what should we choose while designing our system? Should we go for a strong consistency or eventual consistency? Well there is no best solution. The correct choice depends on your business needs. If your priority is data consistency, that is all users must see the most up to date data, then use strong consistency"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0020",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 20,
+        "total_chunks": 27,
+        "text": ". If your priority is data consistency, that is all users must see the most up to date data, then use strong consistency. It is very common in banking systems, inventory management or booking systems. It will ensure the correctness of data, but it may increase the latency and reduce the availability of the system in distributed architecture"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0021",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 21,
+        "total_chunks": 27,
+        "text": ". It will ensure the correctness of data, but it may increase the latency and reduce the availability of the system in distributed architecture. But if your system can tolerate slightly stale data in favor of better performance, scalability and availability, then you should go for eventual consistency. It is ideal for social media, caching layers, analytics and content delivery systems. In this you get faster read rights and always available system"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0022",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 22,
+        "total_chunks": 27,
+        "text": ". It is ideal for social media, caching layers, analytics and content delivery systems. In this you get faster read rights and always available system. But in reality, it's not always either black or white, it's always that gray area. So in real systems, many systems use hybrid approach where they use strong consistency for the consistency, critical operations and eventual consistency for less critical data"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0023",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 23,
+        "total_chunks": 27,
+        "text": ". So before you decide anything, always ask yourself how fresh does your data needs to be? Also can users tolerate minor delays in data sync? And the most important, what is the cost of showing stale data in your business? You can choose based on your user expectations and failure tolerance"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0024",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 24,
+        "total_chunks": 27,
+        "text": ". Another important question is why eventual consistency is needed in microservices? Now we know microservices are independent units that communicate over the network and each service has its own database transaction boundary and failure modes. So coordinating them in a strongly consistent way is very expensive, fragile and it also violates the lose coupling principle. Instead, we allow each service to make local decisions and then inform the other services asynchronously"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0025",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 25,
+        "total_chunks": 27,
+        "text": ". Instead, we allow each service to make local decisions and then inform the other services asynchronously. This gives us better performance, higher availability and resilience to the partial failures. Instead of trying to guarantee the perfect consistency at all the times, modern systems aim for eventual consistency. It is the key idea behind modern system design and once you understand this mindset, you are ready to learn the most practical implementation of all the saga design pattern"
+    },
+    {
+        "chunk_id": "eventual_consistency_chunk_0026",
+        "doc_id": "eventual_consistency",
+        "title": "Eventual Consistency",
+        "topic": "distributed_system",
+        "source": "Eventual Consistency.mp4",
+        "chunk_index": 26,
+        "total_chunks": 27,
+        "text": ". We have services used local transactions and compensate when things go wrong. And that's exactly what we are going to learn next. So make sure you like share and subscribe and don't forget to hit the bell icon so you get notified when the new videos uploaded. See you in the next one. Till then, let's keep learning."
+    }
+]

@@ -1,0 +1,362 @@
+[
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0000",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 0,
+        "total_chunks": 36,
+        "text": "Hello and welcome to CIDECode. In today's video, we are going to understand what is Circuit Breaker in microservices. Whenever we talk about Circuit Breaker, we also hear terms like non-transient failures, resilient systems, cascading failures, thundering hurts, fault tolerance, retries recovery and so on. Some of these terms help us to understand the concepts behind circuit breaker pattern, but sometimes these terms can also confuse us"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0001",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 1,
+        "total_chunks": 36,
+        "text": ". Some of these terms help us to understand the concepts behind circuit breaker pattern, but sometimes these terms can also confuse us. In this video, we are going to understand what is Circuit Breaker in context of microservices and will also try to address the above terms that I have just mentioned"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0002",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 2,
+        "total_chunks": 36,
+        "text": ". We will cover what is the definition of a circuit breaker pattern, why it is needed in microservices architecture, how does it solves the problem of non-transient failures, some design considerations in order to understand and implement circuit breaker pattern while also looking at the CU2 code and straight transitions for the same. So let's get started. Circuit breaker is actually a cloud design pattern which is used to deal with non-transient failures in microservices"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0003",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 3,
+        "total_chunks": 36,
+        "text": ". So let's get started. Circuit breaker is actually a cloud design pattern which is used to deal with non-transient failures in microservices. Now you would ask what is the meaning of non-transient failures. In the context of microservices architecture, any failure which can render a system unavailable for a certain period of time or the recovery for that system can take a little bit longer than a few seconds, that failure is constituted as a non-transient failure"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0004",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 4,
+        "total_chunks": 36,
+        "text": ". Some examples of non-transient failures are timeouts or delays where the APIs do not respond or take a longer time to respond resulting in timeouts or databases going down or the connections to databases failing. Services bombarded with a lot of requests and all the requests resulting in failures due to the memory or the CPU issues in the applications. Let's try to understand using the example of a microservice architecture diagram"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0005",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 5,
+        "total_chunks": 36,
+        "text": ". Let's try to understand using the example of a microservice architecture diagram. Here we can see there are certain services, some of them have their own databases and some of them have external calls to different APIs. In normal scenario, all these different calls will work as it is. But let's see what can go wrong. Let's say that this services database went down"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0006",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 6,
+        "total_chunks": 36,
+        "text": ". In normal scenario, all these different calls will work as it is. But let's see what can go wrong. Let's say that this services database went down. In that case, the calls from this service to this service will start failing and since this service is not able to fulfill certain calls, this service when calls this service is also going to get errors in return. And hence you can see because of this particular failure, three services are impacted. This is called a cascading failure"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0007",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 7,
+        "total_chunks": 36,
+        "text": ". And hence you can see because of this particular failure, three services are impacted. This is called a cascading failure. And also this is a non-transient failure because this database will take certain time to recover"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0008",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 8,
+        "total_chunks": 36,
+        "text": ". This is called a cascading failure. And also this is a non-transient failure because this database will take certain time to recover. Circuit Breaker actually helps us in avoiding these cascading failures where a system might be down because of a database or because of some CPU or memory issues in the application or the application can just be bombarded with a lot of requests and hence it's not able to respond properly or responds with a failure"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0009",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 9,
+        "total_chunks": 36,
+        "text": ". In such cases, what we try to do is we try to stop the calls to the failing service by applying the circuit breaker pattern. We try to stop those calls then and there itself for some time until the failing system recovers. Here is a simple example to understand circuit breaker. Let's say there are two services A and B in which B has some queries to a database"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0010",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 10,
+        "total_chunks": 36,
+        "text": ". Here is a simple example to understand circuit breaker. Let's say there are two services A and B in which B has some queries to a database. In the case where the database which B talks to goes down and there are certain failures, there will be a circuit breaker module which will decide if the service's health is good enough to serve traffic or request to A or not"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0011",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 11,
+        "total_chunks": 36,
+        "text": ". If the service B is not responding or the database is down or something else went wrong, the circuit breaker will not allow the request from A to B to go through. So the circuit breaker logic will actually help A to not make calls to the service B so that the service B does not degrades further and also the service A does not keep getting error again and again"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0012",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 12,
+        "total_chunks": 36,
+        "text": ". Before we move on to the details of each states of circuit breaker, let's try to understand what are the three different states of a circuit breaker. There are three states which are closed half open and open. By default, a circuit breaker stays in closed state that means the traffic will go from service A to service B as it is and the response will also be returned from service B to service A as it is"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0013",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 13,
+        "total_chunks": 36,
+        "text": ". In case the circuit breaker is half open that means some traffic can go for the testing purposes if the calling service can actually call the downstream service and check if there are any failures or not. In case the circuit breaker is open that means no traffic can go through and the calling service will just be written with that this service is that they are trying to call is not working right now. Here is a detailed diagram of circuit breaker service A calls service B"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0014",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 14,
+        "total_chunks": 36,
+        "text": ". Here is a detailed diagram of circuit breaker service A calls service B. When the circuit breaker is closed the calls from A go to B and the response is written from B as it is. In case of error scenarios when something goes wrong and service B is degraded, the circuit breaker state switches to open state and all the calls that are going to B are rerouted by circuit breaker with a failure and a failure is returned"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0015",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 15,
+        "total_chunks": 36,
+        "text": ". In case the circuit breaker is half open that means the service might be recovering or we give it some time to recover and then after some time we try to test if the calls from A to B are going. If the calls are successful the response is returned to service A as it is and the circuit breaker switches to closed state again. In the case of half open state if the request is failing or the system has still not recovered then the circuit again goes into the open state"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0016",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 16,
+        "total_chunks": 36,
+        "text": ". In the case of half open state if the request is failing or the system has still not recovered then the circuit again goes into the open state. Here is the circuit breaker state machine that we were just talking about. There are these three states closed open and half open. Default state is closed. If there are certain failures which exceed threshold the circuit breaker goes into open state stopping any calls from going further"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0017",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 17,
+        "total_chunks": 36,
+        "text": ". If there are certain failures which exceed threshold the circuit breaker goes into open state stopping any calls from going further. Being in open state there is a time out which keeps switching to half open state to check the traffic and to see if the system has recovered. If it recovers the half open state goes to close state. If it does not then the half open state again goes to open state until the system has recovered. This is certain time out or delay which we set in the open state"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0018",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 18,
+        "total_chunks": 36,
+        "text": ". This is certain time out or delay which we set in the open state. Using that time out the system keeps checking whether the system has recovered or not or the degraded system has recovered from the failure or not by putting the circuit breaker in half open state. Here is very simple to record for different states of services. While in closed state the circuit breaker will have a failure counter which will be set to zero. It will forward the call to the remote service"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0019",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 19,
+        "total_chunks": 36,
+        "text": ". While in closed state the circuit breaker will have a failure counter which will be set to zero. It will forward the call to the remote service. If there are no issues it returns success as it is. However if there are issues it increments the failure counter. There can be condition check to check if the failure counter increases a certain threshold. Let's say that a service was giving five errors in a matter of one minute"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0020",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 20,
+        "total_chunks": 36,
+        "text": ". Let's say that a service was giving five errors in a matter of one minute. Now if it starts giving hundred errors in a matter of one minute that means some kind of threshold has been broken and in that case the circuit breaker will trip and the state will move to open state. In the open state we just started time out and keep returning the failure. In the half open state however there is a success counter and we try to send a call to the remote service"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0021",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 21,
+        "total_chunks": 36,
+        "text": ". In the half open state however there is a success counter and we try to send a call to the remote service. If there are no errors we increment the success counter and may switch the state on the basis of the success counter. Otherwise we return failure and the circuit breaker still goes into the open state. While we are designing the circuit breaker pattern we have a lot of control over how we can write the logic in circuit breaker pattern and make it intelligent"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0022",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 22,
+        "total_chunks": 36,
+        "text": ". We can have a control over the types and the count of errors we want to be monitored and hence the circuit breaker to be closed or open depending on those types and count of errors. Maybe your service throws three different kind of errors and it is acceptable for you to have errors of type one and two. However it is not acceptable for the system to throw the error of type three and maybe certain number of errors in a certain amount of time"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0023",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 23,
+        "total_chunks": 36,
+        "text": ". However it is not acceptable for the system to throw the error of type three and maybe certain number of errors in a certain amount of time. So you can configure your circuit breaker to only look out for these kind of errors and not do anything in case of such kind of errors. This is the kind of intelligence that you can bake into your circuit breaker implementation"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0024",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 24,
+        "total_chunks": 36,
+        "text": ". This is the kind of intelligence that you can bake into your circuit breaker implementation. While we also have the state machine for circuit breaker which helps us to switch from close state to open state to half open you should also have manual control for states"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0025",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 25,
+        "total_chunks": 36,
+        "text": ". There can be cases where even though there are no failures you might want to switch to open state or there can be cases where you are in open state and in spite of the system not being recovered or system being partially recovered you want to move to closed state. So you need to have a manual control which means you need to have functions in your circuit breaker pattern which allows you to forcefully switch the states"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0026",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 26,
+        "total_chunks": 36,
+        "text": ". You should also keep a lot of check on the timeout and delays that you set for different states. Let's say that you have set a time of 10 milliseconds for your open state to half open state. That means every 10 milliseconds your circuit breaker will switch to half open state and check if the system has recovered or not"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0027",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 27,
+        "total_chunks": 36,
+        "text": ". That means every 10 milliseconds your circuit breaker will switch to half open state and check if the system has recovered or not. Now if this timeout is too high then what would happen your system would recover and still you would be in open and half open state in order to keep testing the system whether it has recovered or not and you will waste some of the requests that are coming into the system that should have been successful"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0028",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 28,
+        "total_chunks": 36,
+        "text": ". However if this timeout is very low in that case you will keep checking between open and half open and testing multiple times which will lead to waste of resources. So you need to be very careful while setting these timeouts while switching these states. In the circuit breaker design pattern you should also consider for concurrency because one service might be getting called from multiple different other services and you need to account for that"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0029",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 29,
+        "total_chunks": 36,
+        "text": ". While implementing the circuit breaker pattern or using a library make sure that you take special care about the logging and monitoring of different states"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0030",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 30,
+        "total_chunks": 36,
+        "text": ". When does one state switch to another and when it switches back to closed state and what happens at every state you need to log all of that with some context and you need to monitor so that you can find some anomalies in case the circuit breaker is not behaving as expected and also you will have all the data in order to track the failures in your system and then maybe fix those failures in future so that they don't occur again"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0031",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 31,
+        "total_chunks": 36,
+        "text": ". So this was all about circuit breaker pattern in microservices to summarize we can just conclude that it is a cloud design pattern used for microservices architecture. You do not need this pattern in case you just have few services or the scenarios where the load is not that heavy"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0032",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 32,
+        "total_chunks": 36,
+        "text": ". You do not need this pattern in case you just have few services or the scenarios where the load is not that heavy. When you have a distributed system and when you have a lot of services and complicated logic while services depending on each other and heavy load only in those cases you need to take a call of implementing the circuit breaker. Also the circuit breaker can be configured and made as smart as you want as per your service and requirements as we just discussed"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0033",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 33,
+        "total_chunks": 36,
+        "text": ". Also the circuit breaker can be configured and made as smart as you want as per your service and requirements as we just discussed. It is an easy yet effective way to build resilience into the systems. Also please make sure that you don't use circuit breaker for transient failures. There can be scenarios where you just have small network failures or just getting 503 once in a while because of some network outage"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0034",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 34,
+        "total_chunks": 36,
+        "text": ". There can be scenarios where you just have small network failures or just getting 503 once in a while because of some network outage. In those cases you should not try to use circuit breaker because that would be over-engineering the system. You should always look for non-transient failures and try to implement circuit breaker pattern in order to solve such kind of problems. I have linked various reading resources plus code resources for circuit breaker pattern in the description"
+    },
+    {
+        "chunk_id": "circuit_breaker_pattern_chunk_0035",
+        "doc_id": "circuit_breaker_pattern",
+        "title": "Circuit Breaker Pattern",
+        "topic": "microservices",
+        "source": "Circuit Breaker Pattern.mp4",
+        "chunk_index": 35,
+        "total_chunks": 36,
+        "text": ". I have linked various reading resources plus code resources for circuit breaker pattern in the description. Do check them out if you are interested to learn more about this. Please don't forget to check out the description and post any questions that you might have in the comments and I will try to get to them. Till then take care, see you in the next video."
+    }
+]

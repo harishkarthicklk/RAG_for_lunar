@@ -1,0 +1,112 @@
+[
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0000",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 0,
+        "total_chunks": 11,
+        "text": "Imagine you're in a classroom and your teacher gives the class a very big task. Build a 1000-piece puzzle before the bell rings. Now, if only one student tries to do it alone, it will take forever. But what if the teacher gives 10 students 100 pieces each? Now the puzzle is being solved in parallel and much faster. That's exactly how distributed systems work. What is a distributed system? A distributed system is a group of computers that work together to appear like a single computer to the user"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0001",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 1,
+        "total_chunks": 11,
+        "text": ". What is a distributed system? A distributed system is a group of computers that work together to appear like a single computer to the user. Definition from Andrew Tannenbaum, a famous computer scientist. In simple words, it's many computers working together as one. Real life example. Let's say you use Google search or watch a YouTube video. When you type something on Google, it doesn't come from one computer"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0002",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 2,
+        "total_chunks": 11,
+        "text": ". Real life example. Let's say you use Google search or watch a YouTube video. When you type something on Google, it doesn't come from one computer. It comes from thousands of computers spread all over the world, working together to give you results in less than a second. It's a distributed system in action. How does it work? Imagine 10 delivery boys working for the same restaurant. If only one person delivers all the food, customers might have to wait a long time"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0003",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 3,
+        "total_chunks": 11,
+        "text": ". If only one person delivers all the food, customers might have to wait a long time. But if the delivery is distributed, each boy takes a few orders. Everyone gets food faster. In computers, it's the same idea. Tasks are divided across multiple machines called nodes. And all these machines work together to get the job done quickly and reliably. Key features of distributed systems. Let's break down the important parts in kid-friendly terms. One, multiple computers, nodes"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0004",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 4,
+        "total_chunks": 11,
+        "text": ". Key features of distributed systems. Let's break down the important parts in kid-friendly terms. One, multiple computers, nodes. Just like a team, a distributed system has many players. Two, shared goal. All the computers work on the same task like solving a big puzzle. Three, communication. They talk to each other over the internet or network like teammates passing the ball. Four, fault tolerance. If one computer fails, the others keep going. It's like having backup players. Five, scalability"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0005",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 5,
+        "total_chunks": 11,
+        "text": ". Four, fault tolerance. If one computer fails, the others keep going. It's like having backup players. Five, scalability. Need more power? Just add more computers like adding more hands to do more work. Where do we use distributed systems? You use distributed systems every day without knowing it. Here are some popular examples. Google search and Gmail, YouTube, and Netflix. Online games like Minecraft servers. Banking apps like PayPal or ATM networks. Cloud storage like Google Drive or Dropbox"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0006",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 6,
+        "total_chunks": 11,
+        "text": ". Online games like Minecraft servers. Banking apps like PayPal or ATM networks. Cloud storage like Google Drive or Dropbox. All these work with computers spread across different cities, even continents. Why are distributed systems important? The network is the computer. John Gage, Sun Microsystems. That quote tells us that the real power of modern computing doesn't come from a single computer, but from many working together. Here's why distributed systems matter. Speed"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0007",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 7,
+        "total_chunks": 11,
+        "text": ". Here's why distributed systems matter. Speed. Tasks get done faster because multiple computers share the load. Reliability. If one machine crashes, the rest keep going. So your service doesn't stop. Scalability. Big companies can grow without needing just one supercomputer. They can add more normal ones. Fun kid analogy. Think of distributed systems like Avengers. Each superhero computer has a different skill, but when they come together, they defeat big threats"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0008",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 8,
+        "total_chunks": 11,
+        "text": ". Think of distributed systems like Avengers. Each superhero computer has a different skill, but when they come together, they defeat big threats. Tasks too big for just one hero. Challenges too. Distributed systems are powerful, but not easy to build. They need to keep all computers updated. Handle failures smartly. Manage communication between machines. Protect against hacking or cyber attacks. It's like organizing a big team. Exciting, but takes planning. Final thoughts"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0009",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 9,
+        "total_chunks": 11,
+        "text": ". Protect against hacking or cyber attacks. It's like organizing a big team. Exciting, but takes planning. Final thoughts. Distributed systems are everywhere. From your favorite games and apps to the websites you use every day. They're the reason your phone loads fast. Videos stream without buffering. And messages send in seconds. In future videos, we'll break down how these systems work behind the scenes. From cloud computing and server clusters to real-time messaging"
+    },
+    {
+        "chunk_id": "distributed_systems_basics_chunk_0010",
+        "doc_id": "distributed_systems_basics",
+        "title": "Distributed Systems Basics",
+        "topic": "distributed_system",
+        "source": "Distributed Systems Basics.mp4",
+        "chunk_index": 10,
+        "total_chunks": 11,
+        "text": ". In future videos, we'll break down how these systems work behind the scenes. From cloud computing and server clusters to real-time messaging. So stay tuned because you're just starting your journey into how the biggest tech wonders work. Quietly, powerfully, and distributed. And always remember, alone we can do so little together we can do so much. Helen Keller, that's the power of distributed systems."
+    }
+]

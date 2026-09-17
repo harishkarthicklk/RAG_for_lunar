@@ -1,0 +1,372 @@
+[
+    {
+        "chunk_id": "consensus_algorithms_chunk_0000",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 0,
+        "total_chunks": 37,
+        "text": "Blockchain technology has become a popular means of distributed ledger systems that allow for secure and transparent transaction recording. To ensure the integrity of these transactions, blockchain networks rely on something that is called as consensus algorithm, whose job is to ensure that transaction added to the blockchain are legitimate and that the network remains secure"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0001",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 1,
+        "total_chunks": 37,
+        "text": ". In this video, we will discuss all the major blockchain consensus algorithms that are used across the globe, their characteristics and how they work. So, let's get started. Starting with number 1, Proof of Work or POW. Now proof of work is the original blockchain consensus algorithm created by Satoshi Nakamoto for the Bitcoin blockchain. It works by requiring network participants to solve a complex mathematical problem which takes a significant amount of computational power"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0002",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 2,
+        "total_chunks": 37,
+        "text": ". It works by requiring network participants to solve a complex mathematical problem which takes a significant amount of computational power. The first participant to solve the problem gets to add the next block of transactions to the blockchain and is rewarded with a pre-determined amount of cryptocurrency. This algorithm requires a large number of computational power and energy consumption which eventually makes it relatively slow and expensive to operate on"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0003",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 3,
+        "total_chunks": 37,
+        "text": ". Next number 2, Proof of stake or PUS. Now proof of stake is a consensus algorithm that aims to address the energy consumption and competition power problems associated with proof of work. That's why in proof of stake instead of solving complex mathematical problems, network participants are required to stake a certain amount of cryptocurrency in the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0004",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 4,
+        "total_chunks": 37,
+        "text": ". And then on the basis of this, the network then randomly selects a participant to validate the next block of transactions based on their staked amount. And accordingly, this participant is rewarded with a transaction fee for their work. And this is exactly what makes proof of stake a faster and more energy efficient consensus protocol than proof of work. Further, proof of stake can be divided into two parts, dedicated proof of stake and leased proof of stake"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0005",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 5,
+        "total_chunks": 37,
+        "text": ". Further, proof of stake can be divided into two parts, dedicated proof of stake and leased proof of stake. Let's understand each of them one by one. Starting with, dedicated proof of stake or DPS. Well, it is a variant of proof of stake consensus algorithm used in some blockchain networks. In this token holders vote for a group of delegates to validate transactions and create new blocks on their behalf"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0006",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 6,
+        "total_chunks": 37,
+        "text": ". In this token holders vote for a group of delegates to validate transactions and create new blocks on their behalf. These delegates are typically chosen based on their level of activity and contribution to the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0007",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 7,
+        "total_chunks": 37,
+        "text": ". These delegates are typically chosen based on their level of activity and contribution to the network. Further, dedicated proof of stake or DPS can be seen faster transaction times and high throughput compared to other consensus algorithms like proof of work due to the delegation of validation process to smaller group of trusted nodes and is used in blockchain networks like EOS and DRAWN. Next, number four, leased proof of stake or L-POS"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0008",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 8,
+        "total_chunks": 37,
+        "text": ". Next, number four, leased proof of stake or L-POS. Now leased proof of stake is a small modification of dedicated proof of stake consensus algorithm that allows users to lease their currency to a chosen delegate in exchange for rewards. The delegate then uses these leased coins to increase their voting power and become a more prominent validator in the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0009",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 9,
+        "total_chunks": 37,
+        "text": ". The delegate then uses these leased coins to increase their voting power and become a more prominent validator in the network. This leasing system helps to promote decentralization by allowing smaller tokens to participate in the validation process and receive rewards even if they don't have the resources to become a delegate themselves. However, leased proof of stake can still be susceptible to centralization if a small group of delegates control a significant amount of leased coins"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0010",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 10,
+        "total_chunks": 37,
+        "text": ". However, leased proof of stake can still be susceptible to centralization if a small group of delegates control a significant amount of leased coins. Next, number five, proof of authority or PUA. Now this is a consensus algorithm which is primarily used in private or consortium blockchains and in a nutshell, the validators in this network are known and trusted individuals who are authorized to validate transactions on the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0011",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 11,
+        "total_chunks": 37,
+        "text": ". And if seen from a performance perspective, this algorithm is faster and more efficient than proof of work or proof of stake or any of its variant. But in doing so, it sacrifices on decentralization, which in a way is one of the crucial fundamentals of blockchain technology. Further, if you want to understand the difference between proof of stake versus proof of work versus proof of authority on a more detailed level, I will recommend you to watch this video on my YouTube channel"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0012",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 12,
+        "total_chunks": 37,
+        "text": ". Link for the same is given in the description below. Next, number six, Byzantine fault tolerance or BFT. Now we all must have heard of situations where some malicious actors have hijacked the control of the network fundamentally to commit a fraud. Byzantine fault tolerance or BFT is a consensus algorithm that is fundamentally designed to tolerate such malicious actors in a network by ensuring that all nodes on the network agree on the current state of blockchain"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0013",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 13,
+        "total_chunks": 37,
+        "text": ". Here, the primary goal of BFT is to achieve consensus even if some nodes are malicious or fail to function properly. Think of it like a group of people trying to make a decision together. In a normal situation, everyone could just vote and the decision with the most votes would win. In a BFT system, some of the people might be lying or giving fake information so it's not simple as just counting votes"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0014",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 14,
+        "total_chunks": 37,
+        "text": ". In a BFT system, some of the people might be lying or giving fake information so it's not simple as just counting votes. To solve this problem, BFT uses a system of checks and balances that require multiple nodes to agree on a decision before it's finalized. It's like having a group of judges who all have to agree on a verdict before it becomes official. Thus, this consensus mechanism ensures that all nodes on the network are working together to maintain the integrity of the blockchain"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0015",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 15,
+        "total_chunks": 37,
+        "text": ". Thus, this consensus mechanism ensures that all nodes on the network are working together to maintain the integrity of the blockchain. Further, BFT is particularly useful in permission blockchain networks where nodes are known and trusted. By using BFT, these networks can achieve faster transaction processing times and higher throughput compared to other consensus mechanisms. If you want to learn more in depth about BFTs and its working, I would recommend you to watch this video on my channel"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0016",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 16,
+        "total_chunks": 37,
+        "text": ". If you want to learn more in depth about BFTs and its working, I would recommend you to watch this video on my channel. Link for the same is given in the description below. An example for BFT includes Hyperlegic Fabric and further just like proof of stake, BFT can also be divided into two derivatives. Practical Byzantine fault tolerance and dedicated Byzantine fault tolerance. Let's discuss each of them one by one. Number 7. Practical Byzantine fault tolerance or BFT"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0017",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 17,
+        "total_chunks": 37,
+        "text": ". Let's discuss each of them one by one. Number 7. Practical Byzantine fault tolerance or BFT. Now BFT is a variant of BFT and ensures that all nodes in the network have a copy of blockchain and can validate new transactions and blocks before they are added to the blockchain. Accordingly, a consensus is reached if two-thirds of the validators in the network agree on the transaction. If seen from a performance perspective, BFT is faster and more efficient than BFT"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0018",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 18,
+        "total_chunks": 37,
+        "text": ". If seen from a performance perspective, BFT is faster and more efficient than BFT. But in a sense, it requires a certain level of trust among validators. One of the main advantages of BFT is that it provides a strong Byzantine fault tolerance, meaning it can tolerate a large number of faulty or malicious nodes in the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0019",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 19,
+        "total_chunks": 37,
+        "text": ". Additionally, a big drawback of BFT is that it's not well suited for networks with a large number of nodes as the number of messages required to reach consensus increases exponentially as the number of nodes in the network grows. Next number 8. Delicated Byzantine fault tolerance or DBFT. It again is a variant of BFT and here nodes are assigned to groups with each group having a designated leader, which is also known as a delegate"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0020",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 20,
+        "total_chunks": 37,
+        "text": ". It again is a variant of BFT and here nodes are assigned to groups with each group having a designated leader, which is also known as a delegate. These leaders or delegates are responsible for proposing new blocks to be added to the blockchain and accordingly other nodes in the group then validate the proposed block before it is added to the blockchain. This process reduces the number of nodes that need to agree on a decision thereby making the consensus process faster and more efficient"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0021",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 21,
+        "total_chunks": 37,
+        "text": ". This process reduces the number of nodes that need to agree on a decision thereby making the consensus process faster and more efficient. Further, DBFT is generally considered to be faster and more efficient than BFT due to its delicate network model. It can be particularly useful in a public blockchain network where fast transaction processing times and high throughput are important while still maintaining a high level of security and reliability. Next number 9. Direct Acyclic graphs or DAG"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0022",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 22,
+        "total_chunks": 37,
+        "text": ". Next number 9. Direct Acyclic graphs or DAG. Now Direct Acyclic graphs or DAG is a data structure used in blockchain technology that differs from traditional blockchains as unlike a linear chain of blocks, a DAG is a collection of nodes or vertices that are connected to each other in a non-linear way. Each node in a DAG represents a transaction and contains a reference to previous transactions forming a Direct Acyclic graph"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0023",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 23,
+        "total_chunks": 37,
+        "text": ". Each node in a DAG represents a transaction and contains a reference to previous transactions forming a Direct Acyclic graph. Further, the beauty of DAG is that here transactions can be processed in parallel, allowing for faster transaction processing times and higher throughput compared to traditional blockchains. In such a network, there is no need for miners or validators to compete to add new blocks to the chain"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0024",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 24,
+        "total_chunks": 37,
+        "text": ". In such a network, there is no need for miners or validators to compete to add new blocks to the chain. Instead, nodes validate transactions and add them to the DAG and other nodes verify the transactions before they are confirmed. This process is known as consensus by validation"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0025",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 25,
+        "total_chunks": 37,
+        "text": ". This process is known as consensus by validation. DAG-based blockchain networks such as IOTA and NANO are often used in applications where fast transaction processing times and highest-cliability is essential, such as Internet of Things or IoT and Machine-to-Machine transactions or M-to-M transactions. Next, number 10, Proof of Capacity or POC. Now Proof of Capacity is a consensus algorithm used in blockchain networks such as burst coin"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0026",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 26,
+        "total_chunks": 37,
+        "text": ". Next, number 10, Proof of Capacity or POC. Now Proof of Capacity is a consensus algorithm used in blockchain networks such as burst coin. In POC, participants are required to show that they have allocated a certain amount of disk space to the blockchain network. This allocated space is used to store and validate transactions. And accordingly, the participant is rewarded with some cryptocurrency amount that is proportional to the amount of disk space they have allocated"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0027",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 27,
+        "total_chunks": 37,
+        "text": ". And accordingly, the participant is rewarded with some cryptocurrency amount that is proportional to the amount of disk space they have allocated. Next, number 11, Proof of Burn or PUB. Well, it is a consensus algorithm that requires participants to burn a certain amount of cryptocurrency in exchange for the right to validate transactions on the network. In order to burn the crypto, it is sent to an unspendable address effectively removing it from this circulation"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0028",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 28,
+        "total_chunks": 37,
+        "text": ". In order to burn the crypto, it is sent to an unspendable address effectively removing it from this circulation. And once this is recorded, the participant is then rewarded with proportional amount of new cryptocurrency created by the network. Next, number 12, Proof of Identity or POI. Now in this consensus algorithm, network participants are required to prove their identity through various means such as government should identification, biometric data or social media accounts"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0029",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 29,
+        "total_chunks": 37,
+        "text": ". And only once their identity is verified, participants are allowed to validate transactions on the network and accordingly are rewarded with the cryptocurrency. Next, number 13, Proof of Activity. Now Proof of Activity is a hybrid consensus mechanism used in blockchain technology that combines proof of work and proof of stake to help ensure security and reliability of the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0030",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 30,
+        "total_chunks": 37,
+        "text": ". In this, minus first perform proof of work to create a new block and then validates confirm the block using proof of stake. This process ensures that the network is secure and efficient as proof of work prevents double spending and proof of stake encourages participation and prevents centralization. And because of this, proof of activity helps in improving the speed and scalability of blockchain networks while still maintaining a high level of security and reliability"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0031",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 31,
+        "total_chunks": 37,
+        "text": ". Next number 14, Proof of Elapsed Time or POI. Now this is the consensus algorithm primarily designed for permissioned blockchains and is developed by Intel. In POI, nodes compete to generate a random wait time and the nodes that complete the wait time first is chosen to create the next block"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0032",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 32,
+        "total_chunks": 37,
+        "text": ". In POI, nodes compete to generate a random wait time and the nodes that complete the wait time first is chosen to create the next block. Here, to ensure that nodes don't cheat by generating shorter wait times, POI uses special hardware called trusted execution environments or teas that create a random wait time and protected from manipulation"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0033",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 33,
+        "total_chunks": 37,
+        "text": ". Fundamentally, POI is a more efficient and environment friendly consensus algorithm than additional proof of work because it doesn't require nodes to perform complex mathematical calculation and instead, POI relies on the random wait time generated by the teas. Next number 15, Proof of Importance. Now this consensus algorithm in blockchain determines which node gets to validate transactions and create new blocks based on their level of activity and contribution to the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0034",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 34,
+        "total_chunks": 37,
+        "text": ". This activity is measured by users' importance score, which is generally calculated based on the number of transactions they have made and the amount of currency they hold. Note with high importance score are more likely to be chosen to validate transactions and create new blocks. This incentivizes users to actively participate in the network and maintain a stake in the currency which helps to ensure the security and stability of the network"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0035",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 35,
+        "total_chunks": 37,
+        "text": ". However, it can also make the network more centralized as users with a large amount of currency may have more influence over the network than smaller users. Lastly, in conclusion, I'd like to say that choosing the right consensus algorithm is crucial for the success of the project and you should consider factors like security, decentralization, efficiency, scalability and fairness while assessing your choice"
+    },
+    {
+        "chunk_id": "consensus_algorithms_chunk_0036",
+        "doc_id": "consensus_algorithms",
+        "title": "Consensus Algorithms",
+        "topic": "distributed_system",
+        "source": "Consensus Algorithms.mp4",
+        "chunk_index": 36,
+        "total_chunks": 37,
+        "text": ". As a wrong decision can lead to security vulnerabilities, centralization, wasted resources and even forking. With that, I hope this video was helpful to you and so do value. If you love my content, feel free to smash that like button and if you haven't already subscribed to my channel, please do as it keeps me motivated and helps me create more content like this for you."
+    }
+]
